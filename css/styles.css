@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    font-size: calc(15px + 0.390625vw);
+}
 body{
     background-color:  #f7f9fa;
     /* color: white; */
@@ -24,7 +27,6 @@ body{
 .cinema-header {
     background-color: #f7f9fa;
     width: 100%;
-    /* position: fixed; */
     top: 0;
     display: flex;
     justify-content: center;
@@ -45,7 +47,6 @@ body{
 .cinema-nav {
     background-color: #000000;
     display: flex;
-    /* position: fixed; */
     top: 0;
     width: 100%;
     justify-content: center;
@@ -60,7 +61,9 @@ body{
 .logo h2{
     text-transform: lowercase;
 }
-
+nav {
+    width: 65%;
+}
 .primary-nav{
     display: flex;
     width: 100%;
@@ -68,50 +71,47 @@ body{
     align-items: center;
     align-content: center;
 }
-nav {
-    width: 60%;
-}
-nav li{
+.primary-nav li{
     width: 25%;
     text-align: center;
+    text-transform: uppercase;
 }
-nav a{
+.primary-nav li a{
     display: block;
     color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 15px;
 }
+.primary-nav li:not(:last-child) {
+    display: block;
+    background: url('img/bg_gnb_menuBar.gif') no-repeat right;
+}
+.primary-nav li a:hover{
+    display: block;
+    /* background-color: ; */
+}
 
-.links ul{
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-    align-items: center;
-}
-.star{
-    width: 15px;
-}
 .options{
     display: flex;
     height: 75px;
-    align-items: center; 
+    width: 150px;
+    align-items: center;
+    justify-content: flex-end;
+
 }
 .options p {
     color: #000000;
 }
 .sign_in{
     display: flex;
-    width: 90px;
+
     gap: 10px;
+
 }
 .avatar{
     width: 18px;
 }
-.shopping_cart{
-    width: 18px;
-}
-
 
 .container::before, .container::after {
     display: table;
