@@ -17,12 +17,11 @@ li, main, nav, ol, p, section, span, ul {
    background: transparent; 
 }
 
-nav ul {
+ul {
    list-style: none;
    list-style-image: none;
 }
-
-nav a {
+a {
    text-decoration: none;
 }
 a:link, a:visited {
@@ -35,7 +34,6 @@ html, body {
    height: 100%;
    width: 100%;
 }
-
 body {
    line-height: 1;
 }
