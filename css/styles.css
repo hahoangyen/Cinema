@@ -20,10 +20,6 @@ body{
     flex-basis: 100%;
     flex: 1;
 } */
-.cinema-header {
-    background-color: #f7f9fa;
-    /* width: 100%; */
-}
 .container{
     display: flex;
     justify-content: space-evenly;
@@ -87,10 +83,7 @@ input[type="search"]:focus {
   outline: none;
 }
 /* ref https://nikitahl.com/search-icon-inside-input */
-/* .searchbar_img{
-    width: 150px;
-    height: 50px;
-} */
+
 .options{
     display: flex;
     width: 200px;
@@ -131,6 +124,44 @@ input[type="search"]:focus {
     color:green;
 }
 
+/* Style the list */
+.tab-breadcrumb-line {
+    justify-content: left;
+    padding-left: 10vw;
+
+}
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    /* background-color: #f7f9fa; */
+  }
+  
+  /* Display list items side by side */
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+  
+  /* Add a slash symbol (/) before/behind each list item */
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+  }
+  
+  /* Add a color to all links inside the list */
+  ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+  
+  /* Add a color on mouse-over */
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+  }
+
+/* banner */
 .slider {
     display: flex;
     width: 100%;
@@ -144,10 +175,11 @@ input[type="search"]:focus {
     font-size: 500%;;
     font-weight: bold;
 }
+
+/* movies tab  */
 .tab-movies-line {
     justify-content: left;
     padding-left: 10vw;
-    
 }
 .tab-movies-nav {
     display: flex;
@@ -180,9 +212,6 @@ input[type="search"]:focus {
     
 }
 
-/* .movie-poster {
-    
-} */
 .poster {
     width: 100%;
     height: auto;
@@ -193,7 +222,7 @@ input[type="search"]:focus {
 
 .register-title {
     display: flex;
-    background-color: white;
+    /* background-color: white; */
     padding: 10px;
 }
 .title-container{
@@ -213,7 +242,7 @@ input[type="search"]:focus {
 }
 .register-form {
     display: flex;
-    background-color: white;
+    /* background-color: white; */
     padding: 10px;
 }
 .register-container {

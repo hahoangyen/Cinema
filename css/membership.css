@@ -6,21 +6,9 @@
 body{
     background-color:  #f7f9fa;
 }
-/* .row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 
-}
-.column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-} */
 .cinema-header {
     background-color: #f7f9fa;
-    /* width: 100%; */
 }
 .container{
     display: flex;
