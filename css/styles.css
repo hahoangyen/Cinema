@@ -209,7 +209,6 @@ ul.breadcrumb {
     flex-direction: column;
     flex-basis: 28%;
     margin-bottom: 20px;
-    
 }
 
 .poster {
@@ -295,3 +294,104 @@ ul.breadcrumb {
     display: table;
     content: " ";
 } */
+
+
+.contact-form-content {
+    padding: 15px 0;
+    height: 900px;
+}
+.contact-form-pane {
+    height: auto;
+    justify-content: center;
+    gap: 5vw;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+.contact-form-col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 35%;
+    margin-bottom: 20px;
+}
+.img-fluid {
+    width: 80%;
+    height: auto;
+}
+
+.heading {
+    font-size: 2.5rem;
+    font-weight: 900; 
+}
+
+
+.btn {
+    border: none;
+    border-radius: 4px !important; 
+}
+.btn.btn-primary {
+    background: #000;
+    color: #fff;
+    padding: 15px 20px;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.btn:active,
+.btn:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.form-group {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.form-control {
+    border: none;
+    background: #f3f3f3; 
+
+   
+    display: block;
+    width: 100%;
+    /* height: $input-height;
+    padding: $input-padding-y $input-padding-x;
+    font-family: $input-font-family;
+    @include font-size($input-font-size);
+    font-weight: $input-font-weight;
+    line-height: $input-line-height;
+    color: $input-color;
+    background-color: $input-bg;
+    background-clip: padding-box;
+    border: $input-border-width solid $input-border-color; */
+}
+
+.form-control:active, .form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #000;
+    background: #f3f3f3; 
+}
+
+.col-form-label {
+    color: #000; 
+}
+
+.btn, .form-control, .custom-select {
+    height: 50px; 
+}
+
+.custom-select:active, .custom-select:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #000; 
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px
+}
