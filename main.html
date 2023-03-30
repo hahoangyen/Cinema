@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
     <title>Main</title>
 </head>
 <body>
@@ -20,8 +21,8 @@
                 </a>
             </div>
             <div class="search">
-                <input type="search" class="search-box search" placeholder="Search..." >
-                <button type="submit" class="search-btn">
+                <input type="search" id="txtLookfor" class="search-box search" placeholder="Search..." autofocus>
+                <button type="submit" id="searchBtn" class="search-btn" onclick="search()">
                     <i class="icon-search"></i>
                 </button>
                 <!-- search bar using js -->

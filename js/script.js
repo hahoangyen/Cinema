@@ -1,4 +1,3 @@
-
 // Get enter key
 // Get the input field
 var input = document.getElementById("txtLookfor"); //replace by input field ID
@@ -23,6 +22,34 @@ function search() {
     location.href = query;
 }
 
+//form validation
+const submit = document.getElementById("submit");
+
+submit.addEventListener('click', validate);
+
+function validate(e) {
+  e.preventDefault();
+
+  const nameField = document.getElementById("name");
+  const emailField = document.getElementById("email");
+  const passField= document.getElementById("password");
+  const passField2= document.getElementById("password2");
+  
+  if (!nameField.value) {
+    nameField.classList.add("invalid");
+    // const nameError = document.getElementById("nameError");
+    // nameError.classList.add("visible");
+    // nameError.setAttribute('aria-hidden', false);
+    // nameError.setAttribute('aria-invalid', true);
+  }  else nameField.classList.remove("invalid");
+  if (!emailField.value) {
+    emailField.classList.add("invalid");
+  } else emailField.classList.remove("invalid");
+  if (!passField.value) {
+    passField.classList.add("invalid");
+  } else passField.classList.remove("invalid");
+   return valid;
+}
 
 
 

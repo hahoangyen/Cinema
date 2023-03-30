@@ -1,4 +1,4 @@
-@import url('https://unpkg.com/css.gg@2.0.0/icons/css/search.css');
+/* @import url('https://unpkg.com/css.gg@2.0.0/icons/css/search.css'); */
 *{
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -123,6 +123,8 @@ input[type="search"]:focus {
 .primary-nav li a:hover{
     color:green;
 }
+
+/* ref w3school */
 
 /* Style the list */
 .tab-breadcrumb-line {
@@ -333,7 +335,7 @@ ul.breadcrumb {
     box-sizing: border-box;
   }
 .form-control {
-    border: none;
+    border: 0;
     background: #f3f3f3; 
     display: block;
     width: 100%;
@@ -401,16 +403,36 @@ textarea.form-control {
     outline: none;
     box-shadow: none;
 }
-label {
+
+/* label {
     display: inline-block;
     margin-bottom: 0.5rem;
 }
 label.error {
     font-size: 12px;
     color: red; 
+} */
+/* change css when validating */
+/* input:required:valid {
+    border: 1px solid green;
+    background: url("../img/icons8-checkmark.svg") no-repeat 95% 50%;
+    background-size: 5%;
+} */
+input.invalid {
+    border: 1px solid red;
+    background: url("../img/icons8-cancel.svg") no-repeat 95% 50%;
+    background-size: 5%;
+    
 }
-
-#message {
+/* input:required:focus:valid {
+  background: url("../img/icons8-checkmark.svg") no-repeat 95% 50%;
+} */
+/* input:focus:invalid {
+  background: url("../img/icons8-cancel.svg") no-repeat 95% 50%;
+  background-size: 5%;
+} */
+/* change css when validating */
+/* #message {
     resize: vertical;
 }
 
@@ -426,9 +448,9 @@ label.error {
     color: #55A44E;
     font-size: 18px;
     font-weight: bold; 
-}
+} */
 
-.submitting {
+/* .submitting {
     float: left;
     width: 100%;
     padding: 10px 0;
@@ -436,4 +458,4 @@ label.error {
     font-weight: bold;
     font-size: 12px;
     color: #000; 
-}
+} */
