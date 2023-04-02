@@ -41,25 +41,32 @@ async function validate(e) {
   const nameField = document.getElementById("name");
   const emailField = document.getElementById("email");
   const msgField = document.getElementById("message"); 
+  let size = msgField.value.length;
+  console.log(size);
   //const passField= document.getElementById("password");
   //const passField2= document.getElementById("password2");
-
+  const validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   //validation condition
   if (!nameField.value) {
     nameField.classList.add("invalid");
   } else nameField.classList.remove("invalid");
 
-  if (!emailField.value) {
+  if (!emailField.value.match(validEmailRegex)) {
     emailField.classList.add("invalid");
   } else emailField.classList.remove("invalid");
 
-  if (!msgField.value) {
+  if (msgField.value.length < 10) {
     msgField.classList.add("invalid");
-  } else msgField.classList.remove("invalid");
+    msgError.classList.add("visible");
+    msgError.setAttribute("aria-hidden", false);
+    msgError.setAttribute("aria-invalid", true);
+  } else {
+    msgField.classList.remove("invalid");
+    msgError.classList.remove("visible");}
 
 
   //send condition
-  if (nameField.value != "" && emailField.value != "" && msgField.value != "") {
+  if (nameField.value != "" && emailField.value.match(validEmailRegex) && msgField.value.length >= 10) {
     await sleep(1500);
     document.getElementById("form-message-success").style.visibility = "visible";
 
