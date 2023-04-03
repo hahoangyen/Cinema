@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
     <title>Main</title>
 </head>
+
 <body>
     <div class="cinema-header">
         <div class="container">
@@ -20,19 +23,19 @@
                 </a>
             </div>
             <div class="search">
-                <input type="search" class="search-box search" placeholder="Search..." >
-                <button type="submit" class="search-btn">
+                <input type="search" id="txtLookfor" class="search-box search" placeholder="Search..." autofocus>
+                <button type="submit" id="searchBtn" class="search-btn" onclick="search()">
                     <i class="icon-search"></i>
                 </button>
                 <!-- search bar using js -->
             </div>
             <div class="options">
-                <a href="#" class="sign_in">
+                <a href="membership.html" class="sign_in">
                     <img src="img/profile-user-svgrepo-com.svg" alt="" class="avatar">
                     <p>Log In/Sign Up</p>
                 </a>
             </div>
-        </div>    
+        </div>
     </div>
     <div class="cinema-nav">
         <div class="container">
@@ -106,24 +109,76 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- <div class="tab-movies">
+        <div class="tab-movies-line container">
+            <ul class="tab-movies-nav">
+                <li><a href="#">Now Showing</a></li>
+                <li><a href="#">Coming Soon</a></li>
+            </ul>
+        </div>
+    </div> -->
+    <div class="tab-movies-content">
         <div class="tab-pane container" id="coming">
             <div class="movie-item">
                 <div class="movie-poster">
                     <img src="img/template-show.jpg" alt="" class="poster">
                 </div>
                 <div class="movie-title">
-
+                    <p>Movie Title</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <div class="movie-poster">
+                    <img src="img/template-show.jpg" alt="" class="poster">
+                </div>
+                <div class="movie-title">
+                    <p>Movie Title</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <div class="movie-poster">
+                    <img src="img/template-show.jpg" alt="" class="poster">
+                </div>
+                <div class="movie-title">
+                    <p>Movie Title</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <div class="movie-poster">
+                    <img src="img/template-show.jpg" alt="" class="poster">
+                </div>
+                <div class="movie-title">
+                    <p>Movie Title</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <div class="movie-poster">
+                    <img src="img/template-show.jpg" alt="" class="poster">
+                </div>
+                <div class="movie-title">
+                    <p>Movie Title</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <div class="movie-poster">
+                    <img src="img/template-show.jpg" alt="" class="poster">
+                </div>
+                <div class="movie-title">
+                    <p>Movie Title</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class = "footer">
-        <div class = "footer-container"> 
-            <div class = "footer-logo">LOGO & SLOGAN</div>
-            <div class = "footer-contact">CONTACT US</div>
-            <div class = "footer-social">SOCIAL</div>
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">LOGO & SLOGAN</div>
+            <div class="footer-contact">CONTACT US</div>
+            <div class="footer-social">SOCIAL</div>
         </div>
     </div>
 </body>
+
 </html>
