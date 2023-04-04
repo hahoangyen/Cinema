@@ -106,7 +106,7 @@ input[type="search"]:focus {
     width: 65%;
 }
 .primary-nav li{
-    width: 25%;
+    width: 33%;
     text-align: center;
     text-transform: uppercase;
 }
@@ -179,43 +179,43 @@ ul.breadcrumb {
 }
 
 /* movies tab  */
-.tab-movies {
+.main-movies {
     padding: 10px 0;
 }
 
-.tab-movies-line {
+.main-movies-line {
     justify-content: left;
     padding-left: 10vw;
 }
-.tab-movies-nav {
+.main-movies-nav {
     display: flex;
     width: 45%;
     border-bottom: 1px solid #ddd;
 }
-.tab-movies-nav li {
+.main-movies-nav li {
     width: 150px;
     margin-right: 15px;
     padding: 10px 0;
 }
-.tab-movies-nav li > a {
+.main-movies-nav li > a {
     text-transform: uppercase;
 }
 
-.tab-pane {
+.main-movies-pane {
     height: auto;
     justify-content: space-between;
     gap: 10px;
     flex-wrap: wrap;
     width: 80%;
 }
-.movie-item {
+.main-movie-item {
     display: flex;
     flex-direction: column;
     flex-basis: 45%;
     margin-bottom: 20px;
 }
 
-.poster {
+.main-poster {
     width: 100%;
     height: auto;
 }
@@ -295,11 +295,6 @@ ul.breadcrumb {
     display: flex;
     align-items: center;
   }
-/* .container::before, .container::after, .row::before, .row::after, .column::before, .column::after {
-    display: table;
-    content: " ";
-} */
-
 
 .contact-form-content {
     padding: 15px 0;
@@ -333,11 +328,9 @@ ul.breadcrumb {
     padding-left: 15px;
 }
 
-
-
 *::after {
     box-sizing: border-box;
-  }
+}
 .form-control {
     border: 0;
     background: #f3f3f3; 
@@ -387,7 +380,6 @@ textarea.form-control {
     border-color: #000; 
 }
 
-
 .btn {
     border: none;
     border-radius: 4px !important; 
@@ -413,34 +405,23 @@ textarea.form-control {
     display: none;
     font-size: 0.8em;
     color: red;
-  }
+}
   
-  #msgError.visible {
+#msgError.visible {
     display: block;
-  }
+}
 /* change css when validating */
-/* input:required:valid {
-    border: 1px solid green;
-    background: url("../img/icons8-checkmark.svg") no-repeat 95% 50%;
-    background-size: 5%;
-} */
+
 .invalid {
     border: 1px solid red;
     background: url("../img/icons8-cancel.svg") no-repeat 95% 50%;
     background-size: 5%;
-    
 }
 
 input:focus:invalid {
-  /* background: url("../img/icons8-cancel.svg") no-repeat 95% 50%; */
-  /* background-size: 5%; */
   background: none;
 }
 /* change css when validating */
-
-
-
-
 
 #form-message-success {
     color: #55A44E;
@@ -448,3 +429,91 @@ input:focus:invalid {
     font-weight: bold;
     visibility: hidden;
 } 
+
+
+/*movies review*/
+
+
+
+.movies{
+    width: 80%;
+    margin: auto;
+    max-width: 1240px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.movie{
+    width: 50%;
+    display: flex;
+    margin-bottom: 150px;
+}
+.movie_img{
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    opacity: 0.8;
+    object-fit: cover;
+}
+.picture{
+    width: 120%;
+    height: 120%;
+    position: relative;
+}
+.watch_trailer{
+    width: 100%;
+    background-image: linear-gradient(180deg, #15161693, #141414a9);
+    color: white;
+    position: absolute;
+    top: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 5px; */
+    padding: 5px 5px;
+    text-decoration: none;
+}
+.play_trailer{
+    width: 20px;
+}
+.trailer_p{
+    font-size: 12px;
+}
+.movie_desc{
+    padding: 10px 20px;
+}
+.title{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Bebas Neue';
+}
+.rating{
+    background-color: #60CED1;
+    color: #5A5F68;
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.name h3{
+    font-size: 25px;
+    color: white;
+    font-family: 'Bebas Neue';
+    letter-spacing: 1.3px;
+}
+.genre{
+    color: #60CED1;
+    margin-top: 10px;
+    width: 70%;
+    font-family: 'Bebas Neue';
+}
+.desc{
+    margin-top: 5px;
+    color: white;
+    width: 80%;
+    margin-bottom: 20px;
+    line-height: 2.0;
+}

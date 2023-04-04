@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+    <title>Main</title>
+</head>
+
+<body>
+    <div class="cinema-header">
+        <div class="container">
+            <div class="logo">
+                <a href="/main.html">
+                    <img src="img/logoipsum-222.svg" alt="logo" class="logo_img">
+                </a>
+            </div>
+            <div class="search">
+                <input type="search" id="txtLookfor" class="search-box search" placeholder="Search..." autofocus>
+                <button type="submit" id="searchBtn" class="search-btn" onclick="search()">
+                    <i class="icon-search"></i>
+                </button>
+                <!-- search bar using js -->
+            </div>
+            <div class="options">
+                <a href="membership.html" class="sign_in">
+                    <img src="img/profile-user-svgrepo-com.svg" alt="" class="avatar">
+                    <p>Log In/Sign Up</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="cinema-nav">
+        <div class="container">
+            <ul class="primary-nav">
+                <!-- <li><a href="#">Get Tickets</a></li> -->
+                <li><a href="movies.html">Movies Review</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="tab-breadcrumb">
+        <div class="tab-breadcrumb-line container">
+                <ul class="breadcrumb">
+                    <li><a href="main.html">Home</a></li>
+                    <li>Movies Review</li>
+                </ul>
+        </div>
+    </div>
+
+    <div class="movies">
+        <div class="movie">
+            <div class="picture">
+                <img src="Images/chinese_animation.jpg" alt="" class="movie_img">
+                <a href="#" class="watch_trailer">
+                    <!-- <img src="SVG/play-button.svg" alt="" class="play_trailer"> -->
+                    <div class="container movie_container">
+                        <div class="circle_one circle movie_circle"></div>
+                        <div class="circle_two circle"></div>
+                        <div class="circle_two circle movie_circle_two"></div>
+                        <div class="circle_three circle movie_circle_three"></div>
+                        <img src="SVG/play-button.svg" alt="" class="buttonn play_trailer">
+                    </div>
+                    <p class="trailer_p">WATCH TRAILER</p>
+                </a>
+            </div>
+            <div class="movie_desc">
+                <div class="title">
+                    <div class="name">
+                        <h3>THE LEGEND OF CHOI SUN</h3>
+                    </div>
+                    <div class="rating">
+                        <p>PG</p>
+                    </div>
+                </div>
+                <div class="genre">
+                    ADVENTURE,ANIMATION,COMEDY
+                </div>
+                <div class="desc">
+                    <p>Tad would love for his archeologist colleagues to accept him as one of their own, but he always messes everything up. Tad accidentally destroys a sarcophagus and unleashes an ancient spell endangering...</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="movie">
+            <div class="picture">
+                <img src="Images/Our_city.jpg" alt="" class="movie_img">
+                <a href="#" class="watch_trailer">
+                    <!-- <img src="SVG/play-button.svg" alt="" class="play_trailer"> -->
+                    <div class="container movie_container">
+                        <div class="circle_one circle movie_circle"></div>
+                        <div class="circle_two circle"></div>
+                        <div class="circle_two circle movie_circle_two"></div>
+                        <div class="circle_three circle movie_circle_three"></div>
+                        <img src="SVG/play-button.svg" alt="" class="buttonn play_trailer">
+                    </div>
+                    <p class="trailer_p">WATCH TRAILER</p>
+                </a>
+            </div>
+            <div class="movie_desc">
+                <div class="title">
+                    <div class="name">
+                        <h3>OUR CITY</h3>
+                    </div>
+                    <div class="rating">
+                        <p>PG</p>
+                    </div>
+                </div>
+                <div class="genre">
+                    ADVENTURE,ANIMATION,COMEDY
+                </div>
+                <div class="desc">
+                    <p>Tad would love for his archeologist colleagues to accept him as one of their own, but he always messes everything up. Tad accidentally destroys a sarcophagus and unleashes an ancient spell endangering...</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">LOGO & SLOGAN</div>
+            <div class="footer-contact">CONTACT US</div>
+            <div class="footer-social">SOCIAL</div>
+        </div>
+    </div>
+</body>
+
+</html>
