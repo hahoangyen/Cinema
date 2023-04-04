@@ -56,7 +56,7 @@
             </ul>
         </div>
     </div>
-
+    
     <div class="contact-form-content">
         <div class="contact-form-pane container">
             <div class="contact-form-col">
@@ -64,27 +64,27 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas debitis, fugit natus?</p>
                 <p><img src="img/undraw-contact.svg" alt="Image" class="img-form"></p>
             </div>
-            <div class="contact-form-col">
+            <div class="form-col">
                 <form class="contact-form" method="post" id="contactForm" name="contactForm">
-                    <div class="contact-form-row">
-                        <div class="contact-form-group">
+                    <div class="form-row">
+                        <div class="form-group">
                             <input type="text" class="form-control" name="name" id="name" placeholder="Your name">
 
                         </div>
                     </div>
                     <div class="contact-form-row">
                         <div class="contact-form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                            <label id="email-error" class="error" for="message">Please enter a valid email</label>
                         </div>
                     </div>
-                    <div class="contact-form-row">
-                        <div class="contact-form-group">
+                    <div class="form-row">
+                        <div class="form-group">
                             <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
                         </div>
                     </div>
-                    <div class="contact-form-row">
-                        <div class="contact-form-group">
+                    <div class="form-row">
+                        <div class="form-group">
                             <textarea class="form-control" name="message" id="message" cols="30" rows="7"
                                 placeholder="Write your message"></textarea>
                             <span role="alert" id="msgError" aria-hidden="true">
@@ -94,9 +94,8 @@
                     </div>
                     <div class="contact-form-row">
                         <div class="contact-form-group">
-                            <input type="submit" id="submit" value="Send Message" onclick=""
-                                class="btn btn-primary rounded-0 py-2 px-4">
-
+                            <input type="submit" value="Send Message" class="btn btn-primary rounded-0 py-2 px-4">
+                            <span class="submitting"></span>
                         </div>
                     </div>
                 </form>

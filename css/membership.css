@@ -1,3 +1,5 @@
+@import url(styles.css);
+
 *{
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -6,6 +8,11 @@
 body{
     background-color:  #f7f9fa;
 }
+
+/* div {
+    display: block;
+
+} */
 
 .cinema-header {
     background-color: #f7f9fa;
@@ -69,76 +76,122 @@ body{
 .primary-nav li a:hover{
     color:green;
 }
-.title {
-    display: flex;
-    background-color: white;
-    padding: 10px 0;
-}
-.title-container{
-    display: flex;
-    flex-direction: row;
-    background-color: lightgray;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 90%;
-    max-width: 1440px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 50px;
+.register-content{
+    padding: 42px 0 18px;
 
 }
-.register {
-    display: flex;
-    background-color: #f7f9fa;
-    padding: 10px 0;
+
+.contents-page{
+    width: 1140px;
+    margin: 0 auto;
+
 }
-.register-container {
-    display: flex;
-    flex-direction: row;
-    background-color:lightgray;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 90%;
-    max-width: 1440px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 500px;
+
+.title{
+    padding: 25px 0 30px;
+    width: 100%;
+    background-color: grey;
+
 }
-.register p{   
-    margin: auto;
-    font-size: 500%;;
-    font-weight: bold;
+.register-group .register-right {
+    width: 520pt;
+    float: left;
+}
+
+.register-right .note-error {
+    margin: 0;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.infor-loggin_register{
+    margin-bottom: 20px;
+    box-sizing: border-box;
+
 }
 .footer {
-    padding: 15px 0;
+    /* display: block; */
+    position: relative;
+    color: #f7f9fa;
+    padding: 7rem 0;
+    background-color: #141d2a;
+
 }
-.footer-container {
-    display: flex;
-    flex-direction: row;
+.footer .container {
     width: 100%;
-    /* height: 200px; */
-    justify-content: space-evenly;
-    align-items:start;
-    background-color: black;
-    color: white;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.footer .cta {
+    box-shadow: -20px -20px 0 0 rgba(52,58,64,0.2);
     padding: 20px;
-    order: 99;
-  }
-  .footer-logo {
-    display: flex;
+    background-color: #8186d5;
+    width: 50%;
     align-items: center;
-  }
-  
-  .footer-contact {
+    top: -150px;
+    position: relative;
+}
+.pl-5, .px-5 {
+    padding-left: 3rem!important;
+}
+.pr-5, .px-5 {
+    padding-right: 3rem!important;
+}
+.align-items-center {
+    align-items: center!important;
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    color: white;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    line-height: 1.5;
+}
+h3 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.ml-auto {
+    margin-left: auto!important;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+.btn-dark:hover {
+    color: white;
+    background-color: #23272b;
+    border-color: #1d2124;
+}
+.row {
     display: flex;
-    align-items: center;
-  }
-  
-  .footer-social {
-    display: flex;
-    align-items: center;
-  }
+    flex-wrap: wrap;
+    margin-right: -15;
+    margin-left: -15;
+}
+.col-sm {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+}
