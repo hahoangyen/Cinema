@@ -13,22 +13,50 @@ input.addEventListener("keypress", function (enterEvent) {
   }
 });
 
-
 // search function
 function search() {
   var site = 'google.com';
   var lookfor = document.getElementById("txtLookfor").value;
   var query = "http://www.google.com/search?q=" + encodeURIComponent(lookfor);
   location.href = query;
-
+}
   // sleep function 
-} function sleep(ms) {
+ function sleep(ms) {
   return new Promise(
     resolve => setTimeout(resolve, ms)
   );
 }
 
 
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("slide-dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+
+//contact-form
 const submit = document.getElementById("submit");
 
 submit.addEventListener('click', (validate));
@@ -40,9 +68,8 @@ async function validate(e) {
   //declare field to validate
   const nameField = document.getElementById("name");
   const emailField = document.getElementById("email");
-  const msgField = document.getElementById("message"); 
-  let size = msgField.value.length;
-  console.log(size);
+  const msgField = document.getElementById("message");
+
   //const passField= document.getElementById("password");
   //const passField2= document.getElementById("password2");
   const validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -69,7 +96,6 @@ async function validate(e) {
   if (nameField.value != "" && emailField.value.match(validEmailRegex) && msgField.value.length >= 10) {
     await sleep(1500);
     document.getElementById("form-message-success").style.visibility = "visible";
-
   }
 }
 
