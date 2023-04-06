@@ -69,7 +69,7 @@ async function validate(e) {
   const nameField = document.getElementById("name");
   const emailField = document.getElementById("email");
   const msgField = document.getElementById("message");
-
+  const msgError = document.getElementById("msgError");
   //const passField= document.getElementById("password");
   //const passField2= document.getElementById("password2");
   const validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
