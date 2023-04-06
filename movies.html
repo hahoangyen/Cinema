@@ -18,7 +18,7 @@
     <div class="cinema-header">
         <div class="container">
             <div class="logo">
-                <a href="/main.html">
+                <a href="index.html">
                     <img src="img/logoipsum-222.svg" alt="logo" class="logo_img">
                 </a>
             </div>
@@ -41,7 +41,7 @@
         <div class="container">
             <ul class="primary-nav">
                 <!-- <li><a href="#">Get Tickets</a></li> -->
-                <li><a href="movies.html">Movies Review</a></li>
+                <li><a href="movies.html">Reviews</a></li>
                 <li><a href="membership.html">Membership</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
             </ul>
@@ -49,78 +49,353 @@
     </div>
     <div class="tab-breadcrumb">
         <div class="tab-breadcrumb-line container">
-                <ul class="breadcrumb">
-                    <li><a href="main.html">Home</a></li>
-                    <li>Movies Review</li>
-                </ul>
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Reviews</li>
+            </ul>
         </div>
     </div>
-
-    <div class="movies">
-        <div class="movie">
-            <div class="picture">
-                <img src="Images/chinese_animation.jpg" alt="" class="movie_img">
-                <a href="#" class="watch_trailer">
-                    <!-- <img src="SVG/play-button.svg" alt="" class="play_trailer"> -->
-                    <div class="container movie_container">
-                        <div class="circle_one circle movie_circle"></div>
-                        <div class="circle_two circle"></div>
-                        <div class="circle_two circle movie_circle_two"></div>
-                        <div class="circle_three circle movie_circle_three"></div>
-                        <img src="SVG/play-button.svg" alt="" class="buttonn play_trailer">
-                    </div>
-                    <p class="trailer_p">WATCH TRAILER</p>
+    <!-- https://letterboxd.com/film -->
+    <!-- https://www.rogerebert.com/reviews/ -->
+    <div class="review-movies-content">
+        <div class="review-movie-pane container" data-movies="johnwick">
+            <div class="review-picture">
+                <img src="img/vertical_johnwick.jpg" alt="" class="review-movie-img">
+                <a href="https://www.youtube.com/watch?v=yjRHZEUamCc" class="watch-trailer ">
+                    <img src="img/play-button-svgrepo-com.svg" alt="play-button" class="icon">
+                    <p class="trailer-p">WATCH TRAILER</p>
                 </a>
             </div>
-            <div class="movie_desc">
+            <div class="movie-desc">
                 <div class="title">
                     <div class="name">
-                        <h3>THE LEGEND OF CHOI SUN</h3>
+                        <h3>John Wick: Chapter 4</h3>
                     </div>
                     <div class="rating">
-                        <p>PG</p>
+                        <p>R</p>
                     </div>
                 </div>
-                <div class="genre">
-                    ADVENTURE,ANIMATION,COMEDY
+                <div class="attribute">
+                    <div class="year">
+                        2023
+                    </div>
+                    <div class="time">
+                        <img src="img/time-left-svgrepo-com.svg" alt="icon-time-left" class="icon">
+                        169 mins
+                    </div>
+                    <div class="genre">
+                        Thriller, Action, Crime
+                    </div>
                 </div>
                 <div class="desc">
-                    <p>Tad would love for his archeologist colleagues to accept him as one of their own, but he always messes everything up. Tad accidentally destroys a sarcophagus and unleashes an ancient spell endangering...</p>
+                    <p style="font-weight: 700;">NO WAY BACK, ONE WAY OUT.</p>
+                    <p>With the price on his head ever increasing, John Wick uncovers a path to defeating The High
+                        Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful
+                        alliances across the globe and forces that turn old friends into foes.<span id="dots">..</span>
+                    </p>
+                    <span id="more">
+                        <p>Welcome back, Mr. Wick. Four years after "John Wick: Chapter 3 – Parabellum," director Chad
+                            Stahelski and Keanu Reeves have returned to theaters with "John Wick: Chapter 4," a film
+                            that
+                            was supposed to hit theaters almost two full years ago. It was worth the wait.
+                            Stahelski and writers Shay Hatten and Michael Finch have distilled the mythology-heavy
+                            approach
+                            of the last couple chapters with the streamlined action of the first film, resulting in a
+                            final
+                            hour here that stands among the best of the genre.
+                        </p>
+                    </span>
+                    <button onclick="readMore('johnwick')" class="btn btn-primary" id="readMoreBtn">Read more</button>
                 </div>
-                
             </div>
         </div>
-        <div class="movie">
-            <div class="picture">
-                <img src="Images/Our_city.jpg" alt="" class="movie_img">
-                <a href="#" class="watch_trailer">
-                    <!-- <img src="SVG/play-button.svg" alt="" class="play_trailer"> -->
-                    <div class="container movie_container">
-                        <div class="circle_one circle movie_circle"></div>
-                        <div class="circle_two circle"></div>
-                        <div class="circle_two circle movie_circle_two"></div>
-                        <div class="circle_three circle movie_circle_three"></div>
-                        <img src="SVG/play-button.svg" alt="" class="buttonn play_trailer">
-                    </div>
-                    <p class="trailer_p">WATCH TRAILER</p>
+        <div class="review-movie-pane container" data-movies="shazam">
+            <div class="review-picture">
+                <img src="img/vertical_shazam.jpg" alt="" class="review-movie-img">
+                <a href="https://www.youtube.com/watch?v=AIc671o9yCI" class="watch-trailer ">
+                    <img src="img/play-button-svgrepo-com.svg" alt="play-button" class="icon">
+                    <p class="trailer-p">WATCH TRAILER</p>
                 </a>
             </div>
-            <div class="movie_desc">
+            <div class="movie-desc">
                 <div class="title">
                     <div class="name">
-                        <h3>OUR CITY</h3>
+                        <h3>Shazam! Fury of the Gods</h3>
+                    </div>
+                    <div class="rating">
+                        <p>PG-13</p>
+                    </div>
+                </div>
+                <div class="attribute">
+                    <div class="year">
+                        2023
+                    </div>
+                    <div class="time">
+                        <img src="img/time-left-svgrepo-com.svg" alt="icon-time-left" class="icon">
+                        130 mins
+                    </div>
+                    <div class="genre">
+                        Action, Fantasy, Comedy
+                    </div>
+                </div>
+                <div class="desc">
+                    <p style="font-weight: 700;">OH. MY. GODS.</p>
+                    <p>Billy Batson and his foster siblings, who transform into superheroes by saying “Shazam!”, are
+                        forced to get back into action and fight the Daughters of Atlas, who they must stop from
+                        using a weapon that could destroy the world.<span id="dots">..</span>
+                    </p>
+                    <span id="more">
+                        <p>“Shazam! Fury of the Gods” arrives with two strikes against it since it’s not only a
+                            studio-produced sequel but also a superhero movie made in 2023. One should expect a
+                            certain
+                            level of creative committee-mandated, Mad Libs-y monotony, regardless of how one feels
+                            about
+                            the surprisingly decent “Shazam!”. The makers of that fine-enough 2019
+                            franchise-starter,
+                            including director David F. Sandberg, toned down both the Troma Lite cynicism and
+                            post-Spielberg sentimentality that’s come to define the lighthearted James Gunn-style
+                            super-projects that dominate the landscape.
+                        </p>
+                    </span>
+                    <button onclick="readMore('shazam')" class="btn btn-primary" id="readMoreBtn">Read more</button>
+                </div>
+            </div>
+        </div>
+        <div class="review-movie-pane container" data-movies="d&d">
+            <div class="review-picture">
+                <img src="img/vertical_d&d.jpg" alt="" class="review-movie-img">
+                <a href="https://www.youtube.com/watch?v=IiMinixSXII" class="watch-trailer ">
+                    <img src="img/play-button-svgrepo-com.svg" alt="play-button" class="icon">
+                    <p class="trailer-p">WATCH TRAILER</p>
+                </a>
+            </div>
+            <div class="movie-desc">
+                <div class="title">
+                    <div class="name">
+                        <h3>Dungeon & Dragons: Honor Among Thieves</h3>
                     </div>
                     <div class="rating">
                         <p>PG</p>
                     </div>
                 </div>
-                <div class="genre">
-                    ADVENTURE,ANIMATION,COMEDY
+                <div class="attribute">
+                    <div class="year">
+                        2023
+                    </div>
+                    <div class="time">
+                        <img src="img/time-left-svgrepo-com.svg" alt="icon-time-left" class="icon">
+                        134 mins
+                    </div>
+                    <div class="genre">
+                        Action, Adventure, Fantasy
+                    </div>
                 </div>
                 <div class="desc">
-                    <p>Tad would love for his archeologist colleagues to accept him as one of their own, but he always messes everything up. Tad accidentally destroys a sarcophagus and unleashes an ancient spell endangering...</p>
+                    <p style="font-weight: 700;">NO EXPERIENCE NECESSARY.
+                    </p>
+                    <p>A charming thief and a band of unlikely adventurers undertake an epic heist to retrieve a
+                        lost relic, but things go dangerously awry when they run afoul of the wrong people.<span
+                            id="dots">..</span>
+                    </p>
+                    <span id="more">
+                        <p>The introductions to “Dungeons & Dragons: Honor Among Thieves” at the SXSW Film
+                            Festival
+                            emphasized that they “made this movie for everyone.” There’s clearly a concern that
+                            the
+                            film may not reach outside the demographic of people who once played or still play
+                            the
+                            wildly influential role-playing game. And there should be because branding can be a
+                            double-edged sword. On the one hand, it targets a massive fan base already familiar
+                            with
+                            an IP. On the other hand, a film has to be good enough to break out of that
+                            familiarity
+                            to reach a wider audience—think of how well “The Last of Us” is playing to viewers
+                            who
+                            never played the game. So how will fans of Dungeons & Dragons respond to this
+                            expensive
+                            foray into their favorite fantasy experience? Paramount is rolling a 20-sided die
+                            and
+                            hoping to get the right number, but the fickle Dungeon Master of Hollywood may have
+                            a
+                            fatal surprise around the next corner.
+                        </p>
+                    </span>
+                    <button onclick="readMore('d&d')" class="btn btn-primary" id="readMoreBtn">Read
+                        more</button>
                 </div>
-                
+            </div>
+        </div>
+        <div class="review-movie-pane container" data-movies="knock">
+            <div class="review-picture">
+                <img src="img/vertical_knock.jpg" alt="" class="review-movie-img">
+                <a href="https://www.youtube.com/watch?v=gv_QhoUy-xc" class="watch-trailer ">
+                    <img src="img/play-button-svgrepo-com.svg" alt="play-button" class="icon">
+                    <p class="trailer-p">WATCH TRAILER</p>
+                </a>
+            </div>
+            <div class="movie-desc">
+                <div class="title">
+                    <div class="name">
+                        <h3>Knock at the Cabin</h3>
+                    </div>
+                    <div class="rating">
+                        <p>R</p>
+                    </div>
+                </div>
+                <div class="attribute">
+                    <div class="year">
+                        2023
+                    </div>
+                    <div class="time">
+                        <img src="img/time-left-svgrepo-com.svg" alt="icon-time-left" class="icon">
+                        100 mins
+                    </div>
+                    <div class="genre">
+                        Horror, Thriller, Mystery
+                    </div>
+                </div>
+                <div class="desc">
+                    <p style="font-weight: 700;">SAVE YOUR FAMILY OR SAVE HUMANITY. MAKE THE CHOICE.</p>
+                    <p>While vacationing at a remote cabin, a young girl and her parents are taken hostage by
+                        four armed strangers who demand that the family make an unthinkable choice to avert the
+                        apocalypse. With limited access to the outside world, the family must decide what they
+                        believe before all is lost.<span id="dots">..</span>
+                    </p>
+                    <span id="more">
+                        <p>M. Night Shyamalan should probably just stay away from the apocalypse. Who could
+                            forget
+                            the baffling events of his global warming horror “The Happening,” aptly represented
+                            by a
+                            scene in which a character just lays down in front of a moving lawn mower? Or what
+                            about
+                            “After Earth,” which made a box office bomb out of a sci-fi movie starring Will
+                            Smith
+                            and his son Jaden Smith? There’s something about the end of the world that
+                            fascinates
+                            Shyamalan—as a sentimental moralist, an overzealous twister, and a
+                            button-pusher—there’s
+                            also something that always foils him. His latest, “Knock at the Cabin,” uses the
+                            question of human behavior during the threat of end times to create a morality study
+                            that progressively hollows itself out. It’s another minor work from a director whose
+                            films, especially after “After Earth,” have been mostly major.
+                        </p>
+                    </span>
+                    <button onclick="readMore('knock')" class="btn btn-primary" id="readMoreBtn">Read
+                        more</button>
+                </div>
+            </div>
+        </div>
+        <div class="review-movie-pane container" data-movies="murder">
+            <div class="review-picture">
+                <img src="img/vertical_murdermys2.jpg" alt="" class="review-movie-img">
+                <a href="https://www.youtube.com/watch?v=LM2F56uK0fs" class="watch-trailer ">
+                    <img src="img/play-button-svgrepo-com.svg" alt="play-button" class="icon">
+                    <p class="trailer-p">WATCH TRAILER</p>
+                </a>
+            </div>
+            <div class="movie-desc">
+                <div class="title">
+                    <div class="name">
+                        <h3>Murder Mystery 2</h3>
+                    </div>
+                    <div class="rating">
+                        <p>PG-13</p>
+                    </div>
+                </div>
+                <div class="attribute">
+                    <div class="year">
+                        2023
+                    </div>
+                    <div class="time">
+                        <img src="img/time-left-svgrepo-com.svg" alt="icon-time-left" class="icon">
+                        90 mins
+                    </div>
+                    <div class="genre">
+                        Mystery, Action, Comedy
+                    </div>
+                </div>
+                <div class="desc">
+                    <p style="font-weight: 700;">THIS MYSTERY IS DEUX OR DIE.
+                    </p>
+                    <p>After starting their own detective agency, Nick and Audrey Spitz land a career-making
+                        case when their billionaire pal is kidnapped from his wedding.<span id="dots">..</span>
+                    </p>
+                    <span id="more">
+                        <p>Was I a little too harsh on 2019’s “Murder Mystery” or do I just like Adam Sandler
+                            more now? Both could be true, but it’s indicative of how much comedy can be based on
+                            timing and what's going on in the real world. Coming off a spate of mediocre (to be
+                            kind) comedies that emerged from his initial deal with Netflix, I gave the
+                            comedy/thriller a modest two stars, but now I think it deserves another half-star as
+                            a solid diversion. And that could be because of the goodwill engendered by projects
+                            like “Uncut Gems,” “Hustle,” and even the relatively enjoyable “Hubie Halloween.” Or
+                            I could have just been in a worse mood four years ago. Whatever the reason, “Murder
+                            Mystery 2” gets the job done in much the same way. Once again, Sandler’s charm is
+                            the strength. Once again, the relatively tight runtime (this one is only 90) keeps
+                            The Sandman and his writers away from the meandering non-jokes that fatten the worst
+                            Happy Madison movies. And, once again, it’s an easy way to tune out the real world
+                            for a feature runtime. Maybe it’s just that we need that more in the 2020s than we
+                            did pre-pandemic? It's a mystery.
+                        </p>
+                    </span>
+                    <button onclick="readMore('murder')" class="btn btn-primary" id="readMoreBtn">Read
+                        more</button>
+                </div>
+            </div>
+        </div>
+        <div class="review-movie-pane container" data-movies="mario">
+            <div class="review-picture">
+                <img src="img/vertical_supermariobros.jpg" alt="" class="review-movie-img">
+                <a href="https://www.youtube.com/watch?v=RjNcTBXTk4I" class="watch-trailer ">
+                    <img src="img/play-button-svgrepo-com.svg" alt="play-button" class="icon">
+                    <p class="trailer-p">WATCH TRAILER</p>
+                </a>
+            </div>
+            <div class="movie-desc">
+                <div class="title">
+                    <div class="name">
+                        <h3>The Super Mario Bros. Movie</h3>
+                    </div>
+                    <div class="rating">
+                        <p>PG</p>
+                    </div>
+                </div>
+                <div class="attribute">
+                    <div class="year">
+                        2023
+                    </div>
+                    <div class="time">
+                        <img src="img/time-left-svgrepo-com.svg" alt="icon-time-left" class="icon">
+                        92 mins
+                    </div>
+                    <div class="genre">
+                        Adventure, Comedy, Family
+                    </div>
+                </div>
+                <div class="desc">
+                    <p style="font-weight: 700;">PRESS START.
+                    </p>
+                    <p>While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are
+                        transported down a mysterious pipe and wander into a magical new world. But when the brothers
+                        are separated, Mario embarks on an epic quest to find Luigi.<span id="dots">..</span>
+                    </p>
+                    <span id="more">
+                        <p>Mario has come a long way since the notoriously awful 1993 version of his adventure starring
+                            Bob Hoskins and John Leguizamo, but the new “The Super Mario Bros. Movie” doesn’t reflect
+                            the franchise's creativity in the slightest. The latest animated blockbuster from
+                            Illumination is their most soulless to date, a film that feels like ChatGPT produced it
+                            after data and imagery from the games were fed into a computer. It is “The Chris Farley
+                            Show” of family entertainment, mistaking making references to something that was “awesome”
+                            for actually making a movie. And it is one of the most drenched-in-desperation animated
+                            films I’ve ever seen. “Remember this?!? Remember how much you liked it?!? Please like it
+                            again!” I so desperately wanted to see something that sparked the imagination of the kid in
+                            me, like that first game, or spoke to the fun I’ve had playing installments across multiple
+                            Nintendo platforms. Instead, I got a movie that's as hollow as a trailer, something that
+                            willfully avoids anything creative or ambitious. Mario and Luigi deserve so much better.
+                        </p>
+                    </span>
+                    <button onclick="readMore('mario')" class="btn btn-primary" id="readMoreBtn">Read
+                        more</button>
+                </div>
             </div>
         </div>
     </div>
@@ -132,5 +407,22 @@
         </div>
     </div>
 </body>
+<script>
+    function readMore(movie) {
+        var dots = document.querySelector(`.review-movie-pane[data-movies="${movie}"] #dots`);
+        var moreText = document.querySelector(`.review-movie-pane[data-movies="${movie}"] #more`);
+        var btnText = document.querySelector(`.review-movie-pane[data-movies="${movie}"] #readMoreBtn`);
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+</script>
 
 </html>

@@ -1,4 +1,7 @@
 /* @import url('https://unpkg.com/css.gg@2.0.0/icons/css/search.css'); */
+@import url(//db.onlinewebfonts.com/c/11cb6974aad7e20f9f6f7c2337e25d64?family=Copyright+Klim+Type+Foundry);
+@import url(//db.onlinewebfonts.com/c/105007d99d9df64c50cc24d696d79555?family=Graphik+Web+Regular);
+@import url(//db.onlinewebfonts.com/c/0033a2fbc0329740fb86c1cfd134cb94?family=Roboto);
 *{
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -18,7 +21,8 @@ body{
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    height: 50px;
+    height: auto;
+    min-height:50px;
 }
 .logo_img{
     width: 150px;
@@ -251,10 +255,10 @@ ul.breadcrumb {
 }
 .main-movies-nav li > a {
     text-transform: uppercase;
+    color: #000;
 }
 
 .main-movies-pane {
-    height: auto;
     justify-content: space-between;
     gap: 10px;
     flex-wrap: wrap;
@@ -268,17 +272,22 @@ ul.breadcrumb {
 }
 
 .main-poster {
-    width: 100%;
-    height: auto;
+    width: 476.38px;
+    height: 317.58px;
+}
+.main-movie-title p{
+    padding-top:10px;
+    font-family: 'TiemposHeadlineWeb-Bold',Georgia,serif;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
-#showing {
+/* #showing {
     display: none;
-}
+} */
 
 .register-title {
     display: flex;
-    /* background-color: white; */
     padding: 10px;
 }
 .title-container{
@@ -298,7 +307,6 @@ ul.breadcrumb {
 }
 .register-form {
     display: flex;
-    /* background-color: white; */
     padding: 10px;
 }
 .register-container {
@@ -353,11 +361,11 @@ ul.breadcrumb {
     height: 900px;
 }
 .contact-form-pane {
-    height: auto;
     justify-content: center;
-    gap: 3vw;
+    gap: 5vw;
     flex-wrap: wrap;
     width: 100vw;
+    align-items: unset;
 }
 .contact-form-col {
     flex-basis: 37%;
@@ -435,7 +443,7 @@ textarea.form-control {
 
 .btn {
     border: none;
-    border-radius: 4px !important; 
+    border-radius: 4px; 
 }
 .btn.btn-primary {
     background: #000;
@@ -486,87 +494,92 @@ input:focus:invalid {
 
 /*movies review*/
 
-
-
-.movies{
-    width: 80%;
-    margin: auto;
-    max-width: 1240px;
+.review-movie-pane{
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 50px;
+    justify-content: left;
+    padding-left: 10vw;
+    align-items: unset;
+    padding-top: 30px;
+    padding-bottom: 15px;
 }
-.movie{
-    width: 50%;
-    display: flex;
-    margin-bottom: 150px;
-}
-.movie_img{
-    width: 100%;
-    height: 50%;
+.review-movie-img{
+    width: 281.79px;
     border-radius: 10px;
-    opacity: 0.8;
+    opacity: 0.9;
     object-fit: cover;
 }
-.picture{
-    width: 120%;
-    height: 120%;
-    position: relative;
+
+.icon{
+    width: 25px;
 }
-.watch_trailer{
-    width: 100%;
-    background-image: linear-gradient(180deg, #15161693, #141414a9);
-    color: white;
-    position: absolute;
-    top: 40%;
+.watch-trailer{
+    color: #000;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    /* gap: 5px; */
+    justify-content: center;
+    gap: 5px;
+    margin: 25px 50px;
     padding: 5px 5px;
     text-decoration: none;
+    border: 3px solid #000;
+    border-radius: 5px;
 }
-.play_trailer{
-    width: 20px;
+
+
+.trailer-p{
+    font-weight: 700;
 }
-.trailer_p{
-    font-size: 12px;
-}
-.movie_desc{
-    padding: 10px 20px;
+.movie-desc{
+    padding: 0px 20px;
 }
 .title{
     display: flex;
     align-items: center;
     gap: 20px;
-    font-family: 'Bebas Neue';
+    padding-bottom: 20px;   
+}
+.name h3{
+    font-size: 3rem;
+    font-family: 'TiemposHeadlineWeb-Bold',Georgia,serif;
 }
 .rating{
-    background-color: #60CED1;
-    color: #5A5F68;
+    background-color: #000;
+    color: #fff;
     height: 30px;
     padding: 10px;
     display: flex;
     align-content: center;
     align-items: center;
     justify-content: center;
+    border: 3px solid #000;
 }
-.name h3{
-    font-size: 25px;
-    color: white;
-    font-family: 'Bebas Neue';
-    letter-spacing: 1.3px;
+.rating p {
+    font-weight: 700;
+    font-size: 1.5rem;
 }
-.genre{
-    color: #60CED1;
-    margin-top: 10px;
-    width: 70%;
-    font-family: 'Bebas Neue';
+.attribute {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding-bottom: 30px;
+    font-family: 'Graphik-Regular-Web',sans-serif;
+    font-size: 1.2rem;
+}
+.attribute .icon{
+    width:16px;
 }
 .desc{
-    margin-top: 5px;
-    color: white;
     width: 80%;
     margin-bottom: 20px;
     line-height: 2.0;
+}
+.desc p {
+    padding-bottom: 10px;
+}
+#readMoreBtn{
+    padding: 10px;
+    height: 40px;
+}
+#more {
+    display: none;
 }
