@@ -14,7 +14,7 @@
     <title>Main</title>
 </head>
 
-<body onload="slideMain()">
+<body>
     <div class="cinema-header">
         <div class="container">
             <div class="logo">
@@ -83,16 +83,16 @@
     </div>
 
     </div>
-    <div class="main-movies">
+    <div class="main-movies" id="movies-content">
         <div class="main-movies-line container">
             <ul class="main-movies-nav">
-                <li><a href="#">Now Showing</a></li>
-                <li><a href="#">Coming Soon</a></li>
+                <li><a id="showing" onclick="show('showing')" class="content-active" >Now Showing</a></li>
+                <li><a id="coming" onclick="show('coming')">Coming Soon</a></li>
             </ul>
         </div>
-    </div>
-    <div class="main-movies-content">
-        <div class="main-movies-pane container" id="showing">
+   
+    <div class="main-movies-content" data-toggle="showing">
+        <div class="main-movies-pane container animated animatedFadeInUp fadeInUp" >
             <div class="main-movie-item">
                 <div class="main-movie-poster">
                     <img src="img/horizontal_johnwick.jpg" alt="johnwick" class="main-poster">
@@ -153,59 +153,59 @@
             </ul>
         </div>
     </div> -->
-    <div class="main-movies-content">
-        <div class="main-movies-pane container" id="coming">
+    <div class="main-movies-content" data-toggle="coming">
+        <div class="main-movies-pane container animated animatedFadeInUp fadeInUp hide" >
             <div class="main-movie-item">
                 <div class="main-movie-poster">
-                    <img src="img/template-show.jpg" alt="" class="main-poster">
+                    <img src="img/horizontal_suzume.jpg" alt="marvel" class="main-poster">
                 </div>
                 <div class="main-movie-title">
-                    <p>Movie Title</p>
+                    <p>Suzume's Locking Up</p>
                 </div>
             </div>
             <div class="main-movie-item">
                 <div class="main-movie-poster">
-                    <img src="img/template-show.jpg" alt="" class="main-poster">
+                    <img src="img/horizontal_spider.jpg" alt="" class="main-poster">
                 </div>
                 <div class="main-movie-title">
-                    <p>Movie Title</p>
+                    <p>Spider-Man: Across the Spider-Verse</p>
                 </div>
             </div>
             <div class="main-movie-item">
                 <div class="main-movie-poster">
-                    <img src="img/template-show.jpg" alt="" class="main-poster">
+                    <img src="img/horizontal_themeg.jpeg" alt="" class="main-poster">
                 </div>
                 <div class="main-movie-title">
-                    <p>Movie Title</p>
+                    <p>The Meg 2: The Trench</p>
                 </div>
             </div>
             <div class="main-movie-item">
                 <div class="main-movie-poster">
-                    <img src="img/template-show.jpg" alt="" class="main-poster">
+                    <img src="img/horizontal_wonka.jpg" alt="" class="main-poster">
                 </div>
                 <div class="main-movie-title">
-                    <p>Movie Title</p>
+                    <p>Wonka</p>
                 </div>
             </div>
             <div class="main-movie-item">
                 <div class="main-movie-poster">
-                    <img src="img/template-show.jpg" alt="" class="main-poster">
+                    <img src="img/horizontal_elemental.jpg" alt="" class="main-poster">
                 </div>
                 <div class="main-movie-title">
-                    <p>Movie Title</p>
+                    <p>Elemental</p>
                 </div>
             </div>
             <div class="main-movie-item">
                 <div class="main-movie-poster">
-                    <img src="img/template-show.jpg" alt="" class="main-poster">
+                    <img src="img/vertical_marvels.jpg" alt="" class="main-poster">
                 </div>
                 <div class="main-movie-title">
-                    <p>Movie Title</p>
+                    <p>The Marvels</p>
                 </div>
             </div>
         </div>
     </div>
-
+</div>
     <div class="footer">
         <div class="footer-container">
             <div class="footer-logo">LOGO & SLOGAN</div>
@@ -237,10 +237,10 @@ function showSlides(n) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" slide-active", "");
   }
   slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+  dots[slideIndex - 1].className += " slide-active";
 }
 
 </script>
