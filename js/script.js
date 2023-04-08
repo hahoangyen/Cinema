@@ -82,9 +82,10 @@ function show(type) {
 }
 
 function readMore(movie) {
-  var dots = document.querySelector(`.review-movie-pane[data-movies="${movie}"] #dots`);
-  var moreText = document.querySelector(`.review-movie-pane[data-movies="${movie}"] #more`);
-  var btnText = document.querySelector(`.review-movie-pane[data-movies="${movie}"] #readMoreBtn`);
+  // var dots = document.querySelector(`.review-movie-pane[data-movies="${movie}"] #dots`);
+  var dots = document.querySelector(`#${movie} #dots`);
+  var moreText = document.querySelector(`#${movie} #more`);
+  var btnText = document.querySelector(`#${movie} #readMoreBtn`);
 
   if (dots.style.display === "none") {
       dots.style.display = "inline";
@@ -94,6 +95,15 @@ function readMore(movie) {
       dots.style.display = "none";
       btnText.innerHTML = "Read less";
       moreText.style.display = "inline";
+  }
+}
+
+function openNav() {
+  var x = document.getElementById("mobileNav");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
   }
 }
 
