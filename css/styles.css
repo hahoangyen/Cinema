@@ -579,7 +579,7 @@ textarea.form-control {
 }
 
 .img-form {
-    width: 115%;
+    width: 100%;
 }
 
 .heading {
@@ -883,8 +883,5 @@ input:focus:invalid {
     .desc {
         width:100%;
         line-height: 1.8;
-    }
-    .title{
-        
     }
 }
