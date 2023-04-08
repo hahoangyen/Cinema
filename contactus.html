@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class="cinema-header">
+    <div class="header">
         <div class="container">
             <div class="logo">
                 <a href="index.html">
@@ -26,10 +26,7 @@
             <div class="search">
                 <input type="search" id="txtLookfor" class="search-box search" placeholder="Search..." autofocus>
                 <button type="submit" id="searchBtn" class="search-btn" onclick="search()">
-                    <i class="icon-search"></i>
                 </button>
-                <!-- search bar using js -->
-
             </div>
             <div class="options">
                 <a href="membership.html" class="sign_in">
@@ -39,16 +36,16 @@
             </div>
         </div>
     </div>
-    <div class="cinema-nav">
+    <div class="main-nav">
         <div class="container">
             <ul class="primary-nav">
-                <!-- <li><a href="#">Get Tickets</a></li> -->
                 <li><a href="movies.html">Reviews</a></li>
                 <li><a href="membership.html">Membership</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
             </ul>
         </div>
     </div>
+    <!-- https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
     <div class="mobile-nav">
         <a href="index.html" class="mobile-nav-active"><img src="img/logoipsum-222.svg" alt="logo"></a>
         <div id="mobileNav">
@@ -66,6 +63,7 @@
             <i class="fa fa-bars fa-2x"></i>
         </a>
     </div>
+    <!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
     <div class="tab-breadcrumb">
         <div class="tab-breadcrumb-line container">
             <ul class="breadcrumb">
@@ -121,57 +119,41 @@
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <div class="site-section">
-            <div class="footer-container">
-                <div class="cta d-block d-md-flex align-items-center px-5">
-                    <div> <h2 class="mb-0">Ready to explore Movie World?</h2>
-                            <h3 class="text-dark">Let's get started!</h3>
-                    </div>
-                <div class="ml-auto">
-                    <a href="#" class="btn btn-dark rounded-0 py-3 px-5">Contact us</a>
+    <div class="footer">
+        <div class="footer-content container">
+            <div class="hanger">
+                <div>
+                    <h2>Ready to explore Movie World?</h2>
+                    <h3>Let's get started!</h3>
+                </div>
+                <div class="btn-right">
+                    <a href="contactus.html" class="btn btn-primary">Contact us</a>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm">
-                    <a href="#" class="footer-logo">CINEMA</a>
+            <ul class="footer-nav">
+                <li>
+                    <a href="index.html" class="footer-logo"><img src="img/logoipsum-222.svg" alt=""></a>
                     <p class="copyright"><small>© 2023</small></p>
-                </div>
-                <div class="col-sm">
-                    <h3>Company</h3>
-                        <ul class="list-unstyled links">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Careers</a></li>
-                        </ul>
-                </div>
-                <div class="col-sm">
+                </li>
+                <li>
+                    <h3>About Us</h3>
+                </li>
+                <li>
                     <h3>Support</h3>
-                        <ul class="list-unstyled links">
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Contact us</a></li>
-                            <li><a href="#">Help & Support</a></li>
-                        </ul>
-                </div>
-                <div class="col-sm">
-                    <h3>Further Information</h3>
-                        <ul class="list-unstyled links">
-                            <li><a href="#">Terms &amp; Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
-                </div>
-                <div class="col-md-3">
-                    <h3>Follow us</h3>
-                        <ul class="list-unstyled social">
-                            <li><a href="#"><span class="icon-facebook"></span></a></li>
-                            <li><a href="#"><span class="icon-twitter"></span></a></li>
-                            <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                            <li><a href="#"><span class="icon-medium"></span></a></li>
-                            <li><a href="#"><span class="icon-paper-plane"></span></a></li>
-                        </ul>
-                </div>
-            </div>
-        </div>   
-    </footer>
+                </li>
+                <li>
+                    <h3>Follow Us</h3>
+                    <ul class="list-unstyled social">
+                        <li><a href="#"><span class="icon-facebook"></span></a></li>
+                        <li><a href="#"><span class="icon-twitter"></span></a></li>
+                        <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                        <li><a href="#"><span class="icon-medium"></span></a></li>
+                        <li><a href="#"><span class="icon-paper-plane"></span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
 
 </html>

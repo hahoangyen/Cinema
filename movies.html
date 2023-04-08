@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class="cinema-header">
+    <div class="header">
         <div class="container">
             <div class="logo">
                 <a href="index.html">
@@ -26,9 +26,7 @@
             <div class="search">
                 <input type="search" id="txtLookfor" class="search-box search" placeholder="Search..." autofocus>
                 <button type="submit" id="searchBtn" class="search-btn" onclick="search()">
-                    <i class="icon-search"></i>
                 </button>
-                <!-- search bar using js -->
             </div>
             <div class="options">
                 <a href="membership.html" class="sign_in">
@@ -38,16 +36,16 @@
             </div>
         </div>
     </div>
-    <div class="cinema-nav">
+    <div class="main-nav">
         <div class="container">
             <ul class="primary-nav">
-                <!-- <li><a href="#">Get Tickets</a></li> -->
                 <li><a href="movies.html">Reviews</a></li>
                 <li><a href="membership.html">Membership</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
             </ul>
         </div>
     </div>
+    <!-- https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
     <div class="mobile-nav">
         <a href="index.html" class="mobile-nav-active"><img src="img/logoipsum-222.svg" alt="logo"></a>
         <div id="mobileNav">
@@ -65,6 +63,7 @@
             <i class="fa fa-bars fa-2x"></i>
         </a>
     </div>
+    <!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
     <div class="tab-breadcrumb">
         <div class="tab-breadcrumb-line container">
             <ul class="breadcrumb">
@@ -419,10 +418,38 @@
         </div>
     </div>
     <div class="footer">
-        <div class="footer-container">
-            <div class="footer-logo">LOGO & SLOGAN</div>
-            <div class="footer-contact">CONTACT US</div>
-            <div class="footer-social">SOCIAL</div>
+        <div class="footer-content container">
+            <div class="hanger">
+                <div>
+                    <h2>Ready to explore Movie World?</h2>
+                    <h3>Let's get started!</h3>
+                </div>
+                <div class="btn-right">
+                    <a href="contactus.html" class="btn btn-primary">Contact us</a>
+                </div>
+            </div>
+            <ul class="footer-nav">
+                <li>
+                    <a href="index.html" class="footer-logo"><img src="img/logoipsum-222.svg" alt=""></a>
+                    <p class="copyright"><small>© 2023</small></p>
+                </li>
+                <li>
+                    <h3>About Us</h3>
+                </li>
+                <li>
+                    <h3>Support</h3>
+                </li>
+                <li>
+                    <h3>Follow Us</h3>
+                    <ul class="list-unstyled social">
+                        <li><a href="#"><span class="icon-facebook"></span></a></li>
+                        <li><a href="#"><span class="icon-twitter"></span></a></li>
+                        <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                        <li><a href="#"><span class="icon-medium"></span></a></li>
+                        <li><a href="#"><span class="icon-paper-plane"></span></a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 </body>
