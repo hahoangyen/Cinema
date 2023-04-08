@@ -13,25 +13,22 @@ input.addEventListener("keypress", function (enterEvent) {
   }
 });
 
-
 // search function
 function search() {
   var site = 'google.com';
   var lookfor = document.getElementById("txtLookfor").value;
   var query = "http://www.google.com/search?q=" + encodeURIComponent(lookfor);
   location.href = query;
-
-  // sleep function 
-} function sleep(ms) {
+}
+// sleep function 
+function sleep(ms) {
   return new Promise(
     resolve => setTimeout(resolve, ms)
   );
 }
-
-
 const submit = document.getElementById("submit");
 
-submit.addEventListener('click', (validate));
+submit.addEventListener('click', validate);
 
 //form validation function
 async function validate(e) {
@@ -40,9 +37,8 @@ async function validate(e) {
   //declare field to validate
   const nameField = document.getElementById("name");
   const emailField = document.getElementById("email");
-  const msgField = document.getElementById("message"); 
-  let size = msgField.value.length;
-  console.log(size);
+  const msgField = document.getElementById("message");
+  const msgError = document.getElementById("msgError");
   //const passField= document.getElementById("password");
   //const passField2= document.getElementById("password2");
   const validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -62,16 +58,42 @@ async function validate(e) {
     msgError.setAttribute("aria-invalid", true);
   } else {
     msgField.classList.remove("invalid");
-    msgError.classList.remove("visible");}
+    msgError.classList.remove("visible");
+  }
 
 
   //send condition
   if (nameField.value != "" && emailField.value.match(validEmailRegex) && msgField.value.length >= 10) {
     await sleep(1500);
     document.getElementById("form-message-success").style.visibility = "visible";
-
   }
 }
+function show(type) {
+  var tab = document.querySelector(`.main-movies-content[data-toggle="${type}"] .main-movies-pane`);
+  var otherTab = document.querySelector(`.main-movies-content[data-toggle="${type === 'showing' ? 'coming' : 'showing'}"] .main-movies-pane`);
+   tab.style.display = "flex";
+  otherTab.style.display = "none";
 
+  var activeBtn = document.querySelector('.main-movies-nav .content-active');
+  if (activeBtn) {
+    activeBtn.classList.remove('content-active');
+  }
+  document.querySelector(`#${type}`).classList.add('content-active');
+}
 
+function readMore(movie) {
+  var dots = document.querySelector(`.review-movie-pane[data-movies="${movie}"] #dots`);
+  var moreText = document.querySelector(`.review-movie-pane[data-movies="${movie}"] #more`);
+  var btnText = document.querySelector(`.review-movie-pane[data-movies="${movie}"] #readMoreBtn`);
+
+  if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more";
+      moreText.style.display = "none";
+  } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less";
+      moreText.style.display = "inline";
+  }
+}
 

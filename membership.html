@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,24 +9,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/membership.css">
-    <title>Membership</title>
+    <script src="js/script.js" defer></script>
+    <title>Main</title>
 </head>
+
 <body>
     <div class="cinema-header">
         <div class="container">
             <div class="logo">
-                <a href="/main.html">
+                <a href="index.html">
                     <img src="img/logoipsum-222.svg" alt="logo" class="logo_img">
                 </a>
             </div>
             <div class="search">
-                <input type="search" class="search-box search" placeholder="Search...">
-                <button type="submit" class="search-btn">
+                <input type="search" id="txtLookfor" class="search-box search" placeholder="Search..." autofocus>
+                <button type="submit" id="searchBtn" class="search-btn" onclick="search()">
                     <i class="icon-search"></i>
                 </button>
                 <!-- search bar using js -->
-    
             </div>
             <div class="options">
                 <a href="membership.html" class="sign_in">
@@ -38,8 +41,8 @@
     <div class="cinema-nav">
         <div class="container">
             <ul class="primary-nav">
-                <li><a href="#">Get Tickets</a></li>
-                <li><a href="#">Movies</a></li>
+                <!-- <li><a href="#">Get Tickets</a></li> -->
+                <li><a href="movies.html">Reviews</a></li>
                 <li><a href="membership.html">Membership</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
             </ul>
