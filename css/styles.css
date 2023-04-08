@@ -301,11 +301,11 @@ ul.breadcrumb {
 } */
 
 
-.form-content {
+.contact-form-content {
     padding: 15px 0;
     height: 900px;
 }
-.form-pane {
+.contact-form-pane {
     height: auto;
     justify-content: center;
     gap: 3vw;
