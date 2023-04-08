@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
@@ -25,9 +26,7 @@
             <div class="search">
                 <input type="search" id="txtLookfor" class="search-box search" placeholder="Search..." autofocus>
                 <button type="submit" id="searchBtn" class="search-btn" onclick="search()">
-                    <i class="icon-search"></i>
                 </button>
-                <!-- search bar using js -->
             </div>
             <div class="options">
                 <a href="membership.html" class="sign_in">
@@ -47,25 +46,44 @@
             </ul>
         </div>
     </div>
+    <!-- https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
+    <div class="mobile-nav">
+        <a href="index.html" class="mobile-nav-active"><img src="img/logoipsum-222.svg" alt="logo"></a>
+        <div id="mobileNav">
+            <div class="search-mobile">
+                <input type="search-mobile" id="txtLookfor" class="search-box search" placeholder="Search..." autofocus>
+                <button type="submit-mobile" id="searchBtn" class="search-btn" onclick="search()">
+                    <i class="icon-search"></i>
+                </button>
+            </div>
+            <a href="movies.html">Reviews</a>
+            <a href="membership.html">Membership</a>
+            <a href="contactus.html">Contact Us</a>
+        </div>
+        <a href="javascript:void(0);" class="mobile-nav-icon" onclick="openNav()">
+            <i class="fa fa-bars fa-2x"></i>
+        </a>
+    </div>
+    <!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
     <div class="slider">
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
             <div class="slide-numbertext">1 / 4</div>
-            <a href="movies.html"><img src="img/horizontal_shazam.jpg" alt="shazam" class="slide-img"></a>
+            <a href="movies.html#shazam"><img src="img/horizontal_shazam.jpg" alt="shazam" class="slide-img"></a>
         </div>
 
         <div class="mySlides fade">
             <div class="slide-numbertext">2 / 4</div>
-            <a href="movies.html"><img src="img/horizontal_knock.jpg" alt="knock" class="slide-img"></a>
+            <a href="movies.html#knock"><img src="img/horizontal_knock.jpg" alt="knock" class="slide-img"></a>
         </div>
 
         <div class="mySlides fade">
             <div class="slide-numbertext">3 / 4</div>
-            <a href="movies.html"><img src="img/horizontal_d&d.jpg" alt="d&d" class="slide-img"></a>
+            <a href="movies.html#d&d"><img src="img/horizontal_d&d.jpg" alt="d&d" class="slide-img"></a>
         </div>
         <div class="mySlides fade">
             <div class="slide-numbertext">4 / 4</div>
-            <a href="movies.html"><img src="/img/horizontal_supermariobros.jpg" alt="mario" class="slide-img"></a>
+            <a href="movies.html#mario"><img src="img/horizontal_supermariobros.jpg" alt="mario" class="slide-img"></a>
         </div>
 
         <!-- Next and previous buttons -->
@@ -86,126 +104,129 @@
     <div class="main-movies" id="movies-content">
         <div class="main-movies-line container">
             <ul class="main-movies-nav">
-                <li><a id="showing" onclick="show('showing')" class="content-active" >Now Showing</a></li>
+                <li><a id="showing" onclick="show('showing')" class="content-active">Now Showing</a></li>
                 <li><a id="coming" onclick="show('coming')">Coming Soon</a></li>
             </ul>
         </div>
-   
-    <div class="main-movies-content" data-toggle="showing">
-        <div class="main-movies-pane container animated animatedFadeInUp fadeInUp" >
-            <div class="main-movie-item">
-                <div class="main-movie-poster">
-                    <img src="img/horizontal_johnwick.jpg" alt="johnwick" class="main-poster">
-                </div>
-                <div class="main-movie-title">
-                    <p>John Wick: Chapter 4</p>
-                </div>
-            </div>
-            <div class="main-movie-item">
-                <div class="main-movie-poster">
-                    <img src="img/horizontal_supermariobros.jpg" alt="mario" class="main-poster">
-                </div>
-                <div class="main-movie-title">
-                    <p>The Super Mario Bros. Movie</p>
-                </div>
-            </div>
-            <div class="main-movie-item">
-                <div class="main-movie-poster">
-                    <img src="img/horizontal_shazam.jpg" alt="shazam" class="main-poster">
-                </div>
-                <div class="main-movie-title">
-                    <p>Shazam! Fury of the Gods</p>
-                </div>
-            </div>
-            <div class="main-movie-item">
-                <div class="main-movie-poster">
-                    <img src="img/horizontal_knock.jpg" alt="knock" class="main-poster">
-                </div>
-                <div class="main-movie-title">
-                    <p>Knock at the Cabin</p>
-                </div>
-            </div>
-            <div class="main-movie-item">
-                <div class="main-movie-poster">
-                    <img src="img/horizontal_d&d.jpg" alt="d&d" class="main-poster">
-                </div>
-                <div class="main-movie-title">
-                    <p>Dungeon & Dragons: Honour among Thieves</p>
-                </div>
-            </div>
-            
-            <div class="main-movie-item">
-                <div class="main-movie-poster">
-                    <img src="img/horizontal_murder.jpg" alt="" class="main-poster">
-                </div>
-                <div class="main-movie-title">
-                    <p>Murder Mystery 2</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- <div class="tab-movies">
-        <div class="tab-movies-line container">
-            <ul class="tab-movies-nav">
-                <li><a href="#">Now Showing</a></li>
-                <li><a href="#">Coming Soon</a></li>
-            </ul>
+        <div class="main-movies-content" data-toggle="showing">
+            <div class="main-movies-pane container animated animatedFadeInUp fadeInUp">
+                <div class="main-movie-item">
+                    <a href="movies.html#johnwick">
+                        <div class="main-movie-poster">
+                            <img src="img/horizontal_johnwick.jpg" alt="johnwick" class="main-poster">
+                        </div>
+                        <div class="main-movie-title">
+                            <p>John Wick: Chapter 4</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="main-movie-item">
+                    <a href="movies.html#mario">
+                    <div class="main-movie-poster">
+                        <img src="img/horizontal_supermariobros.jpg" alt="mario" class="main-poster">
+                    </div>
+                    <div class="main-movie-title">
+                        <p>The Super Mario Bros. Movie</p>
+                    </div>
+                </a>
+                </div>
+                <div class="main-movie-item">
+                    <a href="movies.html#shazam">
+                    <div class="main-movie-poster">
+                        <img src="img/horizontal_shazam.jpg" alt="shazam" class="main-poster">
+                    </div>
+                    <div class="main-movie-title">
+                        <p>Shazam! Fury of the Gods</p>
+                    </div>
+                </a>
+                </div>
+                <div class="main-movie-item">
+                    <a href="movies.html#knock">
+                    <div class="main-movie-poster">
+                        <img src="img/horizontal_knock.jpg" alt="knock" class="main-poster">
+                    </div>
+                    <div class="main-movie-title">
+                        <p>Knock at the Cabin</p>
+                    </div>
+                </a>
+                </div>
+                <div class="main-movie-item">
+                    <a href="movies.html#dd">
+                    <div class="main-movie-poster">
+                        <img src="img/horizontal_d&d.jpg" alt="d&d" class="main-poster">
+                    </div>
+                    <div class="main-movie-title">
+                        <p>Dungeon & Dragons: Honour among Thieves</p>
+                    </div>
+                </a>
+                </div>
+
+                <div class="main-movie-item">
+                    <a href="movies.html#murder">
+                    <div class="main-movie-poster">
+                        <img src="img/horizontal_murder.jpg" alt="" class="main-poster">
+                    </div>
+                    <div class="main-movie-title">
+                        <p>Murder Mystery 2</p>
+                    </div>
+                </a>
+                </div>
+            </div>
         </div>
-    </div> -->
-    <div class="main-movies-content" data-toggle="coming">
-        <div class="main-movies-pane container animated animatedFadeInUp fadeInUp hide" >
-            <div class="main-movie-item">
-                <div class="main-movie-poster">
-                    <img src="img/horizontal_suzume.jpg" alt="marvel" class="main-poster">
+        <div class="main-movies-content" data-toggle="coming">
+            <div class="main-movies-pane container animated animatedFadeInUp fadeInUp hide">
+                <div class="main-movie-item">
+                    <div class="main-movie-poster">
+                        <img src="img/horizontal_suzume.jpg" alt="marvel" class="main-poster">
+                    </div>
+                    <div class="main-movie-title">
+                        <p>Suzume's Locking Up</p>
+                    </div>
                 </div>
-                <div class="main-movie-title">
-                    <p>Suzume's Locking Up</p>
+                <div class="main-movie-item">
+                    <div class="main-movie-poster">
+                        <img src="img/horizontal_spider.jpg" alt="" class="main-poster">
+                    </div>
+                    <div class="main-movie-title">
+                        <p>Spider-Man: Across the Spider-Verse</p>
+                    </div>
                 </div>
-            </div>
-            <div class="main-movie-item">
-                <div class="main-movie-poster">
-                    <img src="img/horizontal_spider.jpg" alt="" class="main-poster">
+                <div class="main-movie-item">
+                    <div class="main-movie-poster">
+                        <img src="img/horizontal_themeg.jpeg" alt="" class="main-poster">
+                    </div>
+                    <div class="main-movie-title">
+                        <p>The Meg 2: The Trench</p>
+                    </div>
                 </div>
-                <div class="main-movie-title">
-                    <p>Spider-Man: Across the Spider-Verse</p>
+                <div class="main-movie-item">
+                    <div class="main-movie-poster">
+                        <img src="img/horizontal_wonka.jpg" alt="" class="main-poster">
+                    </div>
+                    <div class="main-movie-title">
+                        <p>Wonka</p>
+                    </div>
                 </div>
-            </div>
-            <div class="main-movie-item">
-                <div class="main-movie-poster">
-                    <img src="img/horizontal_themeg.jpeg" alt="" class="main-poster">
+                <div class="main-movie-item">
+                    <div class="main-movie-poster">
+                        <img src="img/horizontal_elemental.jpg" alt="" class="main-poster">
+                    </div>
+                    <div class="main-movie-title">
+                        <p>Elemental</p>
+                    </div>
                 </div>
-                <div class="main-movie-title">
-                    <p>The Meg 2: The Trench</p>
-                </div>
-            </div>
-            <div class="main-movie-item">
-                <div class="main-movie-poster">
-                    <img src="img/horizontal_wonka.jpg" alt="" class="main-poster">
-                </div>
-                <div class="main-movie-title">
-                    <p>Wonka</p>
-                </div>
-            </div>
-            <div class="main-movie-item">
-                <div class="main-movie-poster">
-                    <img src="img/horizontal_elemental.jpg" alt="" class="main-poster">
-                </div>
-                <div class="main-movie-title">
-                    <p>Elemental</p>
-                </div>
-            </div>
-            <div class="main-movie-item">
-                <div class="main-movie-poster">
-                    <img src="img/vertical_marvels.jpg" alt="" class="main-poster">
-                </div>
-                <div class="main-movie-title">
-                    <p>The Marvels</p>
+                <div class="main-movie-item">
+                    <div class="main-movie-poster">
+                        <img src="img/vertical_marvels.jpg" alt="" class="main-poster">
+                    </div>
+                    <div class="main-movie-title">
+                        <p>The Marvels</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
     <div class="footer">
         <div class="footer-container">
             <div class="footer-logo">LOGO & SLOGAN</div>
@@ -215,33 +236,34 @@
     </div>
 </body>
 <script>
-    
-  let slideIndex = 1;
-  showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+    let slideIndex = 1;
+    showSlides(slideIndex);
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("slide-dot");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" slide-active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " slide-active";
-}
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("slide-dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" slide-active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " slide-active";
+    }
 
 </script>
+
 </html>
