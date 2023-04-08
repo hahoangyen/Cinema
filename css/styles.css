@@ -740,7 +740,6 @@ input:focus:invalid {
 }
 .btn-overlay {
     position: absolute;
-    
     top: 35%;
     left: 25%;
     transform: translate(-50%, -50%);
