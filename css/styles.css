@@ -718,16 +718,16 @@ input:focus:invalid {
 .review-movie-img {
     width: 281.79px;
     border-radius: 10px;
-    opacity: 0.9;
     object-fit: cover;
+    position: relative;
 }
-
-.play-icon {
-    width: 25px;
+.review-picture{
+    display: flex;
+    flex-direction: column;
 }
 
 .watch-trailer {
-    color: #000;
+    /* color: #000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -736,9 +736,23 @@ input:focus:invalid {
     padding: 5px 5px;
     text-decoration: none;
     border: 3px solid #000;
+    border-radius: 5px; */
+}
+.btn-overlay {
+    position: absolute;
+    
+    top: 35%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    /* background-color: #ddd; */
+    /* color: white; */
+    /* font-size: 16px; */
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
     border-radius: 5px;
 }
-
 .watch-trailer:hover,
 .watch-trailer:focus {
     background-color: #000;
