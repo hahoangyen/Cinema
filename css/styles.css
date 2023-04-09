@@ -1003,7 +1003,9 @@ input:focus:invalid {
         gap: 50px;
         font-size: 13px;
     }
-
+    .attribute .time-icon {
+        width: 12px;
+    }
     .desc {
         width: 100%;
         line-height: 1.8;
