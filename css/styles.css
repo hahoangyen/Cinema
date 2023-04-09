@@ -245,8 +245,9 @@ ul.breadcrumb li a:hover {
 
 .slide-img {
     width: 100%;
-    height: 800px;
+    height: 100%;
     vertical-align: middle;
+    aspect-ratio: 16/9;
 }
 
 .slide-prev,
@@ -342,19 +343,17 @@ ul.breadcrumb li a:hover {
 
 .main-movies-nav {
     display: flex;
-    width: 45%;
-    gap: 50px;
+    gap: 80px;
 }
 
 .main-movies-nav li {
-    margin-right: 15px;
     padding: 10px 0;
 }
 
 .main-movies-nav li>a {
     text-transform: uppercase;
     color: #a0a3a7;
-    font-size: 1.2rem;
+    font-size: calc(12px + 0.5vw);
     font-weight: 700;
 }
 
@@ -405,11 +404,14 @@ ul.breadcrumb li a:hover {
     flex-basis: 45%;
     margin-bottom: 20px;
     max-width: 564.58px;
+    /* height: 30vh; */
 }
 
 .main-poster {
     width: 100%;
-    height: 317.58px;
+    /* max-height: 297.19px; */
+    height: 100%;
+    aspect-ratio: 16/9;
 }
 
 .main-movie-title p {
@@ -723,7 +725,7 @@ input:focus:invalid {
 
 .review-movie-pane {
     display: flex;
-    justify-content: left;
+    justify-content:left;
     padding-left: 10vw;
     align-items: unset;
     padding-top: 30px;
@@ -843,7 +845,7 @@ input:focus:invalid {
 }
 
 .name h3 {
-    font-size: 3rem;
+    font-size: calc(30px + 0.5vw);
     font-family: 'TiemposHeadlineWeb-Bold', Georgia, serif;
 }
 
@@ -867,7 +869,7 @@ input:focus:invalid {
     gap: 80px;
     padding-bottom: 30px;
     font-family: 'Graphik-Regular', 'Roboto', sans-serif;
-    font-size: 1.2rem;
+    font-size: calc(12px + 0.5vw);
 }
 
 .attribute .time-icon {
@@ -879,7 +881,7 @@ input:focus:invalid {
 }
 
 .desc {
-    width: 80%;
+    width: 40vw;
     margin-bottom: 20px;
     line-height: 2.0;
 }
