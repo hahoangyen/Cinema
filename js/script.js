@@ -68,10 +68,11 @@ async function validate(e) {
     document.getElementById("form-message-success").style.visibility = "visible";
   }
 }
+//display showing and coming tab
 function show(type) {
   var tab = document.querySelector(`.main-movies-content[data-toggle="${type}"] .main-movies-pane`);
   var otherTab = document.querySelector(`.main-movies-content[data-toggle="${type === 'showing' ? 'coming' : 'showing'}"] .main-movies-pane`);
-   tab.style.display = "flex";
+  tab.style.display = "flex";
   otherTab.style.display = "none";
 
   var activeBtn = document.querySelector('.main-movies-nav .content-active');
@@ -81,6 +82,7 @@ function show(type) {
   document.querySelector(`#${type}`).classList.add('content-active');
 }
 
+//read more read less
 function readMore(movie) {
   // var dots = document.querySelector(`.review-movie-pane[data-movies="${movie}"] #dots`);
   var dots = document.querySelector(`#${movie} #dots`);
@@ -88,16 +90,17 @@ function readMore(movie) {
   var btnText = document.querySelector(`#${movie} #readMoreBtn`);
 
   if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      btnText.innerHTML = "Read more";
-      moreText.style.display = "none";
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
   } else {
-      dots.style.display = "none";
-      btnText.innerHTML = "Read less";
-      moreText.style.display = "inline";
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
   }
 }
 
+//open mobile nav
 function openNav() {
   var x = document.getElementById("mobileNav");
   if (x.style.display === "block") {
@@ -106,4 +109,21 @@ function openNav() {
     x.style.display = "block";
   }
 }
+
+// https://www.w3schools.com/howto/howto_js_curtain_menu.asp
+//overlay trailer
+// Open
+function openOverlay(element) {
+  var link = element.getAttribute('link');
+  console.log(link);
+  document.getElementById("overlay-nav").style.display = "block";
+  document.getElementById("youtube-trailer").src = link;
+}
+/* Close */
+function closeOverlay() {
+  document.getElementById("overlay-nav").style.display = "none";
+  document.getElementById("youtube-trailer").src = "";
+}
+
+
 

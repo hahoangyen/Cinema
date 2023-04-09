@@ -1,7 +1,6 @@
 /* @import url('https://unpkg.com/css.gg@2.0.0/icons/css/search.css'); */
-@import url(//db.onlinewebfonts.com/c/11cb6974aad7e20f9f6f7c2337e25d64?family=Copyright+Klim+Type+Foundry);
-@import url(//db.onlinewebfonts.com/c/105007d99d9df64c50cc24d696d79555?family=Graphik+Web+Regular);
-@import url(//db.onlinewebfonts.com/c/0033a2fbc0329740fb86c1cfd134cb94?family=Roboto);
+@import url('https://fonts.cdnfonts.com/css/tiempos-headline');
+@import url('https://fonts.cdnfonts.com/css/graphik');
 
 * {
     box-sizing: border-box;
@@ -29,6 +28,7 @@ body {
 .logo {
     display: flex;
 }
+
 .logo_img {
     width: 150px;
     height: 50px;
@@ -516,12 +516,13 @@ ul.breadcrumb li a:hover {
     background-color: #141d2a;
 }
 
-.footer-content{
+.footer-content {
     width: 100vw;
     flex-direction: column;
     padding-bottom: 30px;
     margin-top: 50px;
 }
+
 .hanger {
     display: flex;
     box-shadow: -20px -20px 0 0 rgba(52, 58, 64, 0.2);
@@ -531,9 +532,10 @@ ul.breadcrumb li a:hover {
     top: -30px;
     position: relative;
     width: 55vw;
-    max-width:650px;
+    max-width: 650px;
     margin: auto;
 }
+
 .hanger h2 {
     display: block;
     font-size: 1.2rem;
@@ -546,17 +548,30 @@ ul.breadcrumb li a:hover {
     line-height: 1.8;
     margin-top: 0;
 }
-.footer-nav{
+
+.footer-nav {
     display: flex;
     width: 60vw;
     justify-content: space-between;
 }
-.footer-logo{
+
+.footer-logo {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(32deg) brightness(103%) contrast(103%);
 }
-.footer-nav h3{
+
+.footer-nav h3 {
     font-size: 1.4rem;
 }
+.footer-nav .social{
+    display: flex;
+    padding-top: 15px;
+    justify-content: space-between;
+    gap:10px;
+}
+.footer-nav .social i{
+    color: #fff;
+}
+
 .btn-right {
     margin-left: auto;
 }
@@ -568,7 +583,7 @@ ul.breadcrumb li a:hover {
 
 .contact-form-content {
     padding: 15px 0;
-    height:67vh;
+    height: 67vh;
 }
 
 .contact-form-pane {
@@ -712,55 +727,104 @@ input:focus:invalid {
     padding-left: 10vw;
     align-items: unset;
     padding-top: 30px;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
 }
 
 .review-movie-img {
     width: 281.79px;
     border-radius: 10px;
     object-fit: cover;
-    position: relative;
+    /* position: relative; */
 }
-.review-picture{
+
+.review-picture {
     display: flex;
     flex-direction: column;
+    position: relative;
+    max-height: 422.68px;
 }
 
-.watch-trailer {
-    /* color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    margin: 25px 50px;
-    padding: 5px 5px;
-    text-decoration: none;
-    border: 3px solid #000;
-    border-radius: 5px; */
-}
-.btn-overlay {
+.playbtn-overlay {
     position: absolute;
-    top: 35%;
-    left: 25%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    /* background-color: #ddd; */
-    /* color: white; */
-    /* font-size: 16px; */
-    padding: 12px 24px;
-    border: none;
+    color: rgba(255, 255, 255, 0.9);
     cursor: pointer;
-    border-radius: 5px;
-}
-.watch-trailer:hover,
-.watch-trailer:focus {
-    background-color: #000;
-    color: #ddd;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    padding-left: 22px;
+    padding-top: 14px;
 }
 
-.watch-trailer:hover .play-icon,
-.watch-trailer:focus .play-icon {
-    filter: invert(100%);
+.playbtn-overlay:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* https://www.w3schools.com/howto/howto_js_curtain_menu.asp */
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.overlay-content {
+    position: relative;
+    top: 10%;
+    left: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn-overlay {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* https://embedresponsively.com/ */
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
 }
 
 .trailer-p {
@@ -815,7 +879,7 @@ input:focus:invalid {
 }
 
 .desc {
-    width: 70%;
+    width: 80%;
     margin-bottom: 20px;
     line-height: 2.0;
 }
@@ -944,14 +1008,29 @@ input:focus:invalid {
         width: 100%;
         line-height: 1.8;
     }
-    .footer-content{
+
+    .footer-content {
         width: unset;
     }
+
     .footer-nav h3 {
         font-size: 1.2rem;
     }
-    .hanger{
+
+    .hanger {
         padding: 10px 30px;
         width: unset;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn-overlay {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
     }
 }
