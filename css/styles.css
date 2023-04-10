@@ -32,8 +32,8 @@ body {
 }
 
 .logo_img {
-    width: 150px;
-    height: 50px;
+    width: 60px;
+    height: 40px;
 }
 
 
@@ -573,6 +573,8 @@ ul.breadcrumb li a:hover {
     margin-right: 50px;
 }
 .footer-logo {
+    height: 40px;
+    width: 60px;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(32deg) brightness(103%) contrast(103%);
 }
 
@@ -745,6 +747,13 @@ input:focus:invalid {
 /* change css when validating */
 
 #form-message-success {
+    color: #55A44E;
+    font-size: 18px;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+#form-register-success {
     color: #55A44E;
     font-size: 18px;
     font-weight: bold;
@@ -1007,7 +1016,8 @@ input:focus:invalid {
     }
 
     .img-form {
-        display: none;
+        width: 20px;
+        height: 10px;
     }
 
     .invalid {
