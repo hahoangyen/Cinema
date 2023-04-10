@@ -10,7 +10,9 @@
 body {
     background-color: #fff;
 }
-
+.body{
+    min-height: 100vh;
+}
 .container {
     display: flex;
     justify-content: space-evenly;
@@ -154,6 +156,7 @@ input[type="search"]:focus {
     background-color: #000;
     position: relative;
     display: none;
+    width: 100%;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -517,6 +520,12 @@ ul.breadcrumb li a:hover {
     color: #f7f9fa;
     background-color: #141d2a;
 }
+.footer-mobile {
+    display: none;
+    position: relative;
+    color: #f7f9fa;
+    background-color: #141d2a;
+}
 
 .footer-content {
     width: 100vw;
@@ -536,6 +545,7 @@ ul.breadcrumb li a:hover {
     width: 55vw;
     max-width: 650px;
     margin: auto;
+    gap: 10px;
 }
 
 .hanger h2 {
@@ -555,8 +565,13 @@ ul.breadcrumb li a:hover {
     display: flex;
     width: 60vw;
     justify-content: space-between;
+    gap:10px;
 }
-
+.footer-mobile-logo{
+    padding-bottom: 20px;
+    padding-right: 50px;
+    margin-right: 50px;
+}
 .footer-logo {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(32deg) brightness(103%) contrast(103%);
 }
@@ -564,16 +579,31 @@ ul.breadcrumb li a:hover {
 .footer-nav h3 {
     font-size: 1.4rem;
 }
-.footer-nav .social{
+.social{
     display: flex;
     padding-top: 15px;
     justify-content: space-between;
-    gap:10px;
+    gap: 10px;
 }
-.footer-nav .social i{
+.social i{
     color: #fff;
 }
 
+.footer-vertical{
+    display: flex;
+    justify-content: space-around;
+    width: 60vw;
+    gap: 10px;
+}
+.footer-vertical-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+.footer-vertical-nav h3 {
+    font-size: 1.4rem;
+}
 .btn-right {
     margin-left: auto;
 }
@@ -585,7 +615,7 @@ ul.breadcrumb li a:hover {
 
 .contact-form-content {
     padding: 15px 0;
-    height: 67vh;
+    min-height: 70vh;
 }
 
 .contact-form-pane {
@@ -736,7 +766,6 @@ input:focus:invalid {
     width: 281.79px;
     border-radius: 10px;
     object-fit: cover;
-    /* position: relative; */
 }
 
 .review-picture {
@@ -900,7 +929,7 @@ input:focus:invalid {
 }
 
 /* mobile */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
     .mobile-nav {
         display: block;
     }
@@ -1012,15 +1041,20 @@ input:focus:invalid {
         width: 100%;
         line-height: 1.8;
     }
-
+    .footer {
+        display: none;
+    }
+    .footer-mobile{
+        display: block;
+    }
     .footer-content {
         width: unset;
+        padding-bottom: 15px;
     }
 
     .footer-nav h3 {
         font-size: 1.2rem;
     }
-
     .hanger {
         padding: 10px 30px;
         width: unset;
