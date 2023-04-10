@@ -8,15 +8,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <script src="js/script.js" defer></script>
-    <title>Review</title>
+    <title>Reviews</title>
 </head>
 
 <body>
-    <div class="cinema-header">
+    <div class="header">
         <div class="container">
             <div class="logo">
                 <a href="index.html">
@@ -26,28 +32,26 @@
             <div class="search">
                 <input type="search" id="txtLookfor" class="search-box search" placeholder="Search..." autofocus>
                 <button type="submit" id="searchBtn" class="search-btn" onclick="search()">
-                    <i class="icon-search"></i>
                 </button>
-                <!-- search bar using js -->
             </div>
             <div class="options">
                 <a href="membership.html" class="sign_in">
-                    <img src="img/profile-user-svgrepo-com.svg" alt="" class="avatar">
+                    <i class="fa-solid fa-user"></i>
                     <p>Log In/Sign Up</p>
                 </a>
             </div>
         </div>
     </div>
-    <div class="cinema-nav">
+    <div class="main-nav">
         <div class="container">
             <ul class="primary-nav">
-                <!-- <li><a href="#">Get Tickets</a></li> -->
                 <li><a href="movies.html">Reviews</a></li>
                 <li><a href="membership.html">Membership</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
             </ul>
         </div>
     </div>
+    <!-- https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
     <div class="mobile-nav">
         <a href="index.html" class="mobile-nav-active"><img src="img/logoipsum-222.svg" alt="logo"></a>
         <div id="mobileNav">
@@ -65,6 +69,7 @@
             <i class="fa fa-bars fa-2x"></i>
         </a>
     </div>
+    <!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
     <div class="tab-breadcrumb">
         <div class="tab-breadcrumb-line container">
             <ul class="breadcrumb">
@@ -78,11 +83,12 @@
     <div class="review-movies-content">
         <div class="review-movie-pane container" id="johnwick">
             <div class="review-picture">
-                <img src="img/vertical_johnwick.jpg" alt="" class="review-movie-img">
-                <a href="https://www.youtube.com/watch?v=yjRHZEUamCc" class="watch-trailer ">
-                    <img src="img/play-button-svgrepo-com.svg" alt="play-button" class="play-icon">
-                    <p class="trailer-p">WATCH TRAILER</p>
-                </a>
+                <div link="https://www.youtube.com/embed/qEVUtrk8_B4" onclick="openOverlay(this)" class="watch-trailer">
+                    <img src="img/vertical_johnwick.jpg" alt="" class="review-movie-img">
+                    <div class="playbtn-overlay">
+                        <i class="fa-solid fa-play fa-beat-fade" style="font-size: 2.5em;"></i>
+                    </div>
+                </div>
             </div>
             <div class="movie-desc">
                 <div class="title">
@@ -129,11 +135,12 @@
         </div>
         <div class="review-movie-pane container" id="shazam">
             <div class="review-picture">
-                <img src="img/vertical_shazam.jpg" alt="" class="review-movie-img">
-                <a href="https://www.youtube.com/watch?v=AIc671o9yCI" class="watch-trailer ">
-                    <img src="img/play-button-svgrepo-com.svg" alt="play-button" class="play-icon">
-                    <p class="trailer-p">WATCH TRAILER</p>
-                </a>
+                <div link="https://www.youtube.com/embed/AIc671o9yCI" onclick="openOverlay(this)" class="watch-trailer">
+                    <img src="img/vertical_shazam.jpg" alt="" class="review-movie-img">
+                    <div class="playbtn-overlay">
+                        <i class="fa-solid fa-play fa-beat-fade" style="font-size: 2.5em;"></i>
+                    </div>
+                </div>
             </div>
             <div class="movie-desc">
                 <div class="title">
@@ -181,11 +188,12 @@
         </div>
         <div class="review-movie-pane container" id="dd">
             <div class="review-picture">
-                <img src="img/vertical_d&d.jpg" alt="" class="review-movie-img">
-                <a href="https://www.youtube.com/watch?v=IiMinixSXII" class="watch-trailer ">
-                    <img src="img/play-button-svgrepo-com.svg" alt="play-button" class="play-icon">
-                    <p class="trailer-p">WATCH TRAILER</p>
-                </a>
+                <div link="https://www.youtube.com/embed/HGvv-Hhft3U" onclick="openOverlay(this)" class="watch-trailer">
+                    <img src="img/vertical_d&d.jpg" alt="" class="review-movie-img">
+                    <div class="playbtn-overlay">
+                        <i class="fa-solid fa-play fa-beat-fade" style="font-size: 2.5em;"></i>
+                    </div>
+                </div>
             </div>
             <div class="movie-desc">
                 <div class="title">
@@ -246,11 +254,12 @@
         </div>
         <div class="review-movie-pane container" id="knock">
             <div class="review-picture">
-                <img src="img/vertical_knock.jpg" alt="" class="review-movie-img">
-                <a href="https://www.youtube.com/watch?v=gv_QhoUy-xc" class="watch-trailer ">
-                    <img src="img/play-button-svgrepo-com.svg" alt="play-button" class="play-icon">
-                    <p class="trailer-p">WATCH TRAILER</p>
-                </a>
+                <div link="https://www.youtube.com/embed/0wiBHEACNHs" onclick="openOverlay(this)" class="watch-trailer">
+                    <img src="img/vertical_knock.jpg" alt="" class="review-movie-img">
+                    <div class="playbtn-overlay">
+                        <i class="fa-solid fa-play fa-beat-fade" style="font-size: 2.5em;"></i>
+                    </div>
+                </div>
             </div>
             <div class="movie-desc">
                 <div class="title">
@@ -306,11 +315,12 @@
         </div>
         <div class="review-movie-pane container" id="murder">
             <div class="review-picture">
-                <img src="img/vertical_murdermys2.jpg" alt="" class="review-movie-img">
-                <a href="https://www.youtube.com/watch?v=LM2F56uK0fs" class="watch-trailer ">
-                    <img src="img/play-button-svgrepo-com.svg" alt="play-button" class="play-icon">
-                    <p class="trailer-p">WATCH TRAILER</p>
-                </a>
+                <div link="https://www.youtube.com/embed/4npjjuiLfMI" onclick="openOverlay(this)" class="watch-trailer">
+                    <img src="img/vertical_murdermys2.jpg" alt="" class="review-movie-img">
+                    <div class="playbtn-overlay">
+                        <i class="fa-solid fa-play fa-beat-fade" style="font-size: 2.5em;"></i>
+                    </div>
+                </div>
             </div>
             <div class="movie-desc">
                 <div class="title">
@@ -363,11 +373,12 @@
         </div>
         <div class="review-movie-pane container" id="mario">
             <div class="review-picture">
-                <img src="img/vertical_supermariobros.jpg" alt="" class="review-movie-img">
-                <a href="https://www.youtube.com/watch?v=RjNcTBXTk4I" class="watch-trailer ">
-                    <img src="img/play-button-svgrepo-com.svg" alt="play-button" class="play-icon">
-                    <p class="trailer-p">WATCH TRAILER</p>
-                </a>
+                <div link="https://www.youtube.com/embed/TnGl01FkMMo" onclick="openOverlay(this)" class="watch-trailer">
+                    <img src="img/vertical_supermariobros.jpg" alt="" class="review-movie-img">
+                    <div class="playbtn-overlay">
+                        <i class="fa-solid fa-play fa-beat-fade" style="font-size: 2.5em;"></i>
+                    </div>
+                </div>
             </div>
             <div class="movie-desc">
                 <div class="title">
@@ -457,8 +468,5 @@
         </div>   
     </footer>
 </body>
-<script>
-    
-</script>
 
 </html>

@@ -1,7 +1,6 @@
 /* @import url('https://unpkg.com/css.gg@2.0.0/icons/css/search.css'); */
-@import url(//db.onlinewebfonts.com/c/11cb6974aad7e20f9f6f7c2337e25d64?family=Copyright+Klim+Type+Foundry);
-@import url(//db.onlinewebfonts.com/c/105007d99d9df64c50cc24d696d79555?family=Graphik+Web+Regular);
-@import url(//db.onlinewebfonts.com/c/0033a2fbc0329740fb86c1cfd134cb94?family=Roboto);
+@import url('https://fonts.cdnfonts.com/css/tiempos-headline');
+@import url('https://fonts.cdnfonts.com/css/graphik');
 
 * {
     box-sizing: border-box;
@@ -26,15 +25,15 @@ body {
     min-height: 50px;
 }
 
+.logo {
+    display: flex;
+}
+
 .logo_img {
     width: 150px;
     height: 50px;
 }
 
-/* .mobile-logo_img {
-    width:150px;
-    height:20px;
-} */
 
 /* ref https://nikitahl.com/search-icon-inside-input */
 .search {
@@ -43,6 +42,7 @@ body {
     padding: 2px;
     border: 1px solid currentColor;
     border-radius: 5px;
+    /* width: 25vw; */
 }
 
 input[type="search"] {
@@ -98,22 +98,28 @@ input[type="search"]:focus {
     gap: 10px;
     color: #000;
 }
-.sign_in:hover,.sign_in:focus{
-    color:#008000;
+
+.sign_in:hover,
+.sign_in:focus {
+    color: #008000;
 }
+
 /* filter color calculator https://codepen.io/sosuke/pen/Pjoqqp */
-.sign_in:hover .avatar,.sign_in:focus .avatar{
+.sign_in:hover .avatar,
+.sign_in:focus .avatar {
     filter: invert(18%) sepia(61%) saturate(4936%) hue-rotate(106deg) brightness(101%) contrast(106%);
 }
+
 .avatar {
     width: 18px;
 }
-.cinema-header{
+
+.header {
     background-color: #f7f9fa;
 }
-.cinema-nav {
-    background-color: #000000;
-    /* width: 100%; */
+
+.main-nav {
+    background-color: #000;
 }
 
 .primary-nav {
@@ -124,13 +130,12 @@ input[type="search"]:focus {
 .primary-nav li {
     width: 33%;
     text-align: center;
-    text-transform: uppercase;
 }
 
 .primary-nav li a {
     display: block;
     color: #f7f9fa;
-    font-size: 15px;
+    font-size: 1.2rem;
     font-weight: bold;
     border-right: solid 1px #f7f9fa;
 }
@@ -158,7 +163,7 @@ input[type="search"]:focus {
 
 /* Style navigation menu links */
 .mobile-nav a {
-    color: white;
+    color: #ffffff;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 15px;
@@ -240,8 +245,9 @@ ul.breadcrumb li a:hover {
 
 .slide-img {
     width: 100%;
-    height:800px;
+    height: 100%;
     vertical-align: middle;
+    aspect-ratio: 16/9;
 }
 
 .slide-prev,
@@ -287,6 +293,7 @@ ul.breadcrumb li a:hover {
     position: absolute;
     top: 0;
 }
+
 .slide-dot {
     cursor: pointer;
     height: 15px;
@@ -336,24 +343,25 @@ ul.breadcrumb li a:hover {
 
 .main-movies-nav {
     display: flex;
-    width: 45%;
-    gap: 50px;
+    gap: 80px;
 }
 
 .main-movies-nav li {
-    margin-right: 15px;
     padding: 10px 0;
 }
 
 .main-movies-nav li>a {
     text-transform: uppercase;
     color: #a0a3a7;
-    font-size: 1.2rem;
+    font-size: calc(12px + 0.5vw);
     font-weight: 700;
 }
-#showing, #coming{
+
+#showing,
+#coming {
     cursor: pointer;
 }
+
 .content-active {
     border-bottom: 3px solid green;
     color: #000 !important;
@@ -396,11 +404,14 @@ ul.breadcrumb li a:hover {
     flex-basis: 45%;
     margin-bottom: 20px;
     max-width: 564.58px;
+    /* height: 30vh; */
 }
 
 .main-poster {
     width: 100%;
-    height: 317.58px;
+    /* max-height: 297.19px; */
+    height: 100%;
+    aspect-ratio: 16/9;
 }
 
 .main-movie-title p {
@@ -501,84 +512,82 @@ ul.breadcrumb li a:hover {
 
 /* footer */
 .footer {
-    display: block; 
-    position:relative;
+    display: block;
+    position: relative;
     color: #f7f9fa;
     background-color: #141d2a;
-
-}
-.footer-container {
-    width: 80%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
 }
 
-.site-section {
-    padding-bottom: 60px;
-    margin-top: 30px;
+.footer-content {
+    width: 100vw;
+    flex-direction: column;
+    padding-bottom: 30px;
+    margin-top: 50px;
 }
-.footer .cta {
+
+.hanger {
     display: flex;
-    box-shadow: -20px -20px 0 0 rgba(52,58,64,0.2);
-    padding: 10px 60px;
+    box-shadow: -20px -20px 0 0 rgba(52, 58, 64, 0.2);
+    padding: 10px calc(8px + 1.5625vw);
     background-color: #8186d5;
     align-items: center;
     top: -30px;
     position: relative;
+    width: 55vw;
+    max-width: 650px;
+    margin: auto;
 }
-.align-items-center {
-    align-items: center!important;
-}
-h2 {
+
+.hanger h2 {
     display: block;
     font-size: 1.2rem;
     font-weight: bold;
     color: white;
     line-height: 1.5;
 }
-h3 {
+
+.hanger h3 {
     line-height: 1.8;
     margin-top: 0;
 }
-.ml-auto {
-    margin-left: auto!important;
-    /* text-align:right; */
+
+.footer-nav {
+    display: flex;
+    width: 60vw;
+    justify-content: space-between;
 }
-.btn {
-    display: inline-block;
-    font-weight: 300;
-    text-align: center;
-    vertical-align: middle;
-    padding: 5px;
-    border: 1px solid transparent;
-    background-color: transparent;
+
+.footer-logo {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(32deg) brightness(103%) contrast(103%);
 }
-.btn-dark {
+
+.footer-nav h3 {
+    font-size: 1.4rem;
+}
+.footer-nav .social{
+    display: flex;
+    padding-top: 15px;
+    justify-content: space-between;
+    gap:10px;
+}
+.footer-nav .social i{
     color: #fff;
-    background-color: #343a40;
-    border-color: #343a40;
-    
 }
-.btn-dark:hover {
-    color: white;
-    background-color: #23272b;
-    border-color: #1d2124;
+
+.btn-right {
+    margin-left: auto;
 }
+
 .row {
     display: flex;
     align-items: center;
-  }
-/* .container::before, .container::after, .row::before, .row::after, .column::before, .column::after {
-    display: table;
-    content: " ";
-} */
-
+}
 
 .contact-form-content {
     padding: 15px 0;
+    height: 67vh;
 }
+
 .contact-form-pane {
     height: auto;
     justify-content: center;
@@ -663,7 +672,7 @@ textarea.form-control {
 
 .btn {
     border: 3px solid #000;
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 .btn.btn-primary {
@@ -672,8 +681,7 @@ textarea.form-control {
     padding: 15px 20px;
 }
 
-.btn:hover
- {
+.btn:hover {
     background: #3e3f41;
     color: #ddd;
     font-weight: bold;
@@ -717,46 +725,108 @@ input:focus:invalid {
 
 .review-movie-pane {
     display: flex;
-    justify-content: left;
+    justify-content:left;
     padding-left: 10vw;
     align-items: unset;
     padding-top: 30px;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
 }
 
 .review-movie-img {
     width: 281.79px;
     border-radius: 10px;
-    opacity: 0.9;
     object-fit: cover;
+    /* position: relative; */
 }
 
-.play-icon {
-    width: 25px;
-}
-
-.watch-trailer {
-    color: #000;
+.review-picture {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    margin: 25px 50px;
-    padding: 5px 5px;
+    flex-direction: column;
+    position: relative;
+    max-height: 422.68px;
+}
+
+.playbtn-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    padding-left: 22px;
+    padding-top: 14px;
+}
+
+.playbtn-overlay:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* https://www.w3schools.com/howto/howto_js_curtain_menu.asp */
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.overlay-content {
+    position: relative;
+    top: 10%;
+    left: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
     text-decoration: none;
-    border: 3px solid #000;
-    border-radius: 5px;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }
 
-.watch-trailer:hover,
-.watch-trailer:focus {
-    background-color: #000;
-    color: #ddd;
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
 }
 
-.watch-trailer:hover .play-icon,
-.watch-trailer:focus .play-icon {
-    filter: invert(100%);
+.overlay .closebtn-overlay {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* https://embedresponsively.com/ */
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
 }
 
 .trailer-p {
@@ -775,7 +845,7 @@ input:focus:invalid {
 }
 
 .name h3 {
-    font-size: 3rem;
+    font-size: calc(30px + 0.5vw);
     font-family: 'TiemposHeadlineWeb-Bold', Georgia, serif;
 }
 
@@ -799,7 +869,7 @@ input:focus:invalid {
     gap: 80px;
     padding-bottom: 30px;
     font-family: 'Graphik-Regular', 'Roboto', sans-serif;
-    font-size: 1.2rem;
+    font-size: calc(12px + 0.5vw);
 }
 
 .attribute .time-icon {
@@ -811,7 +881,7 @@ input:focus:invalid {
 }
 
 .desc {
-    width: 70%;
+    width: 40vw;
     margin-bottom: 20px;
     line-height: 2.0;
 }
@@ -835,8 +905,8 @@ input:focus:invalid {
         display: block;
     }
 
-    .cinema-header,
-    .cinema-nav {
+    .header,
+    .main-nav {
         display: none;
     }
 
@@ -887,46 +957,84 @@ input:focus:invalid {
         outline: none;
     }
 
-    .main-movie-item{
+    .main-movie-item {
         flex-basis: 100%;
     }
-    .main-movies-nav{
+
+    .main-movies-nav {
         width: 100%;
     }
+
     .slide-img {
-        height:52vw;
+        height: 52vw;
     }
-    .contact-form-pane{
+
+    .contact-form-pane {
         padding: 0px 40px;
     }
-    .contact-form-col{
+
+    .contact-form-col {
         flex-basis: 100%;
     }
-    .img-form{
+
+    .img-form {
         display: none;
     }
-    .invalid{
+
+    .invalid {
         background-size: unset;
     }
-    .review-movie-pane{
+
+    .review-movie-pane {
         padding-left: 0px;
     }
-    .movie-desc{
+
+    .movie-desc {
         padding-right: 10px;
     }
-    .name h3{
+
+    .name h3 {
         font-size: 1.6rem;
     }
-    
+
     .rating p {
         font-size: 12px;
     }
-    .attribute{
+
+    .attribute {
         gap: 50px;
         font-size: 13px;
     }
+    .attribute .time-icon {
+        width: 12px;
+    }
     .desc {
-        width:100%;
+        width: 100%;
         line-height: 1.8;
+    }
+
+    .footer-content {
+        width: unset;
+    }
+
+    .footer-nav h3 {
+        font-size: 1.2rem;
+    }
+
+    .hanger {
+        padding: 10px 30px;
+        width: unset;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn-overlay {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
     }
 }

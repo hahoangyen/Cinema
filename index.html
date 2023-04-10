@@ -8,15 +8,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <script src="js/script.js" defer></script>
-    <title>Main</title>
+    <title>Movie's Playground</title>
 </head>
 
 <body>
-    <div class="cinema-header">
+    <div class="header">
         <div class="container">
             <div class="logo">
                 <a href="index.html">
@@ -30,16 +36,15 @@
             </div>
             <div class="options">
                 <a href="membership.html" class="sign_in">
-                    <img src="img/profile-user-svgrepo-com.svg" alt="" class="avatar">
+                    <i class="fa-solid fa-user"></i>
                     <p>Log In/Sign Up</p>
                 </a>
             </div>
         </div>
     </div>
-    <div class="cinema-nav">
+    <div class="main-nav">
         <div class="container">
             <ul class="primary-nav">
-                <!-- <li><a href="#">Get Tickets</a></li> -->
                 <li><a href="movies.html">Reviews</a></li>
                 <li><a href="membership.html">Membership</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
@@ -100,7 +105,6 @@
         <span class="slide-dot" onclick="currentSlide(4)"></span>
     </div>
 
-    </div>
     <div class="main-movies" id="movies-content">
         <div class="main-movies-line container">
             <ul class="main-movies-nav">
@@ -122,55 +126,55 @@
                     </a>
                 </div>
                 <div class="main-movie-item">
-                    <a href="movies.html#mario">
-                    <div class="main-movie-poster">
-                        <img src="img/horizontal_supermariobros.jpg" alt="mario" class="main-poster">
-                    </div>
-                    <div class="main-movie-title">
-                        <p>The Super Mario Bros. Movie</p>
-                    </div>
-                </a>
-                </div>
-                <div class="main-movie-item">
-                    <a href="movies.html#shazam">
-                    <div class="main-movie-poster">
-                        <img src="img/horizontal_shazam.jpg" alt="shazam" class="main-poster">
-                    </div>
-                    <div class="main-movie-title">
-                        <p>Shazam! Fury of the Gods</p>
-                    </div>
-                </a>
-                </div>
-                <div class="main-movie-item">
                     <a href="movies.html#knock">
-                    <div class="main-movie-poster">
-                        <img src="img/horizontal_knock.jpg" alt="knock" class="main-poster">
-                    </div>
-                    <div class="main-movie-title">
-                        <p>Knock at the Cabin</p>
-                    </div>
-                </a>
-                </div>
-                <div class="main-movie-item">
-                    <a href="movies.html#dd">
-                    <div class="main-movie-poster">
-                        <img src="img/horizontal_d&d.jpg" alt="d&d" class="main-poster">
-                    </div>
-                    <div class="main-movie-title">
-                        <p>Dungeon & Dragons: Honour among Thieves</p>
-                    </div>
-                </a>
+                        <div class="main-movie-poster">
+                            <img src="img/horizontal_knock.jpg" alt="knock" class="main-poster">
+                        </div>
+                        <div class="main-movie-title">
+                            <p>Knock at the Cabin</p>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="main-movie-item">
+                    <a href="movies.html#shazam">
+                        <div class="main-movie-poster">
+                            <img src="img/horizontal_shazam.jpg" alt="shazam" class="main-poster">
+                        </div>
+                        <div class="main-movie-title">
+                            <p>Shazam! Fury of the Gods</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="main-movie-item">
                     <a href="movies.html#murder">
-                    <div class="main-movie-poster">
-                        <img src="img/horizontal_murder.jpg" alt="" class="main-poster">
-                    </div>
-                    <div class="main-movie-title">
-                        <p>Murder Mystery 2</p>
-                    </div>
-                </a>
+                        <div class="main-movie-poster">
+                            <img src="img/horizontal_murder.jpg" alt="" class="main-poster">
+                        </div>
+                        <div class="main-movie-title">
+                            <p>Murder Mystery 2</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="main-movie-item">
+                    <a href="movies.html#mario">
+                        <div class="main-movie-poster">
+                            <img src="img/horizontal_supermariobros.jpg" alt="mario" class="main-poster">
+                        </div>
+                        <div class="main-movie-title">
+                            <p>The Super Mario Bros. Movie</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="main-movie-item">
+                    <a href="movies.html#dd">
+                        <div class="main-movie-poster">
+                            <img src="img/horizontal_d&d.jpg" alt="d&d" class="main-poster">
+                        </div>
+                        <div class="main-movie-title">
+                            <p>Dungeon & Dragons: Honour among Thieves</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -218,7 +222,7 @@
                 </div>
                 <div class="main-movie-item">
                     <div class="main-movie-poster">
-                        <img src="img/vertical_marvels.jpg" alt="" class="main-poster">
+                        <img src="img/horizontal_marvels.jpg" alt="" class="main-poster">
                     </div>
                     <div class="main-movie-title">
                         <p>The Marvels</p>
@@ -227,33 +231,30 @@
             </div>
         </div>
     </div>
-<footer class="footer">
-    <div class="site-section">
-        <div class="footer-container">
-            <div class="cta d-block d-md-flex align-items-center px-5">
-                <div> <h2 class="mb-0">Ready to explore Movie World?</h2>
-                        <h3 class="text-dark">Let's get started!</h3>
+    <div class="footer">
+        <div class="footer-content container">
+            <div class="hanger">
+                <div>
+                    <h2>Ready to explore Movie World?</h2>
+                    <h3>Let's get started!</h3>
                 </div>
-            <div class="ml-auto">
-                <a href="#" class="btn btn-dark rounded-0 py-3 px-5">Contact us</a>
+                <div class="btn-right">
+                    <a href="contactus.html" class="btn btn-primary">Contact us</a>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm">
-                <a href="#" class="footer-logo">CINEMA</a>
-                <p class="copyright"><small>© 2023</small></p>
-            </div>
-            <div class="col-sm">
-                <h3>About Us</h3>
-                    <ul class="list-unstyled links"></ul>
-            </div>
-            <div class="col-sm">
-                <h3>Support</h3>
-                    <ul class="list-unstyled links"></ul>
-            </div>
-        
-            <div class="col-md-3">
-                <h3>Follow us</h3>
+            <ul class="footer-nav">
+                <li>
+                    <a href="index.html" class="footer-logo"><img src="img/logoipsum-222.svg" alt=""></a>
+                    <p class="copyright"><small>© 2023</small></p>
+                </li>
+                <li>
+                    <h3>About Us</h3>
+                </li>
+                <li>
+                    <h3>Support</h3>
+                </li>
+                <li>
+                    <h3>Follow Us</h3>
                     <ul class="list-unstyled social">
                         <li><a href=""><i class="fa-brands fa-facebook"></i></a></i></li>
                         <li><i class="fa-brands fa-linkedin"></i></li>
@@ -261,14 +262,13 @@
                         <li><a href="#"><span class="icon-medium"></span></a></li>
                         <li><a href="#"><span class="icon-paper-plane"></span></a></li>
                     </ul>
-            </div>
+                </li>
+            </ul>
         </div>
-    </div>   
-</footer>
-    
+    </div>
 </body>
 <script>
-
+    // https://www.w3schools.com/howto/howto_js_slideshow.asp 
     let slideIndex = 1;
     showSlides(slideIndex);
 
