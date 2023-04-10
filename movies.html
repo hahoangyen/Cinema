@@ -429,44 +429,52 @@
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <div class="site-section">
-            <div class="footer-container">
-                <div class="cta d-block d-md-flex align-items-center px-5">
-                    <div> <h2 class="mb-0">Ready to explore Movie World?</h2>
-                            <h3 class="text-dark">Let's get started!</h3>
-                    </div>
-                <div class="ml-auto">
-                    <a href="#" class="btn btn-dark rounded-0 py-3 px-5">Contact us</a>
+    <div class="footer">
+        <div class="footer-content container">
+            <div class="hanger">
+                <div>
+                    <h2>Ready to explore Movie World?</h2>
+                    <h3>Let's get started!</h3>
+                </div>
+                <div class="btn-right">
+                    <a href="contactus.html" class="btn btn-primary">Contact us</a>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm">
-                    <a href="#" class="footer-logo">CINEMA</a>
+            <ul class="footer-nav">
+                <li>
+                    <a href="index.html" class="footer-logo"><img src="img/logoipsum-222.svg" alt=""></a>
                     <p class="copyright"><small>© 2023</small></p>
-                </div>
-                <div class="col-sm">
+                </li>
+                <li>
                     <h3>About Us</h3>
-                        <ul class="list-unstyled links"></ul>
-                </div>
-                <div class="col-sm">
+                </li>
+                <li>
                     <h3>Support</h3>
-                        <ul class="list-unstyled links"></ul>
-                </div>
-            
-                <div class="col-md-3">
-                    <h3>Follow us</h3>
-                        <ul class="list-unstyled social">
-                            <li><a href="#"><span class="icon-facebook"></span></a></li>
-                            <li><a href="#"><span class="icon-twitter"></span></a></li>
-                            <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                            <li><a href="#"><span class="icon-medium"></span></a></li>
-                            <li><a href="#"><span class="icon-paper-plane"></span></a></li>
-                        </ul>
-                </div>
+                </li>
+                <li>
+                    <h3>Follow Us</h3>
+                    <ul class="list-unstyled social">
+                        <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+                        <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter fa-xl"></i></a></li>
+                        <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
+                        <li><a href="https://github.com/"><i class="fa-brands fa-github fa-xl"></i></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- https://www.w3schools.com/howto/howto_js_curtain_menu.asp -->
+    <div id="overlay-nav" class="overlay" onclick="closeOverlay()">
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" id="closebtn-overlay" class="closebtn-overlay" onclick="closeOverlay()">&times;</a>
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <div class='embed-container'>
+                <iframe id="youtube-trailer" src="" frameborder='0' allowfullscreen>
+                </iframe>
             </div>
-        </div>   
-    </footer>
+        </div>
+    </div>
 </body>
 
 </html>
