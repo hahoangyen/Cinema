@@ -36,31 +36,14 @@ async function validate(e) {
 
   //declare field to validate
   const nameField = document.getElementById("name");
-  const firstnameField = document.getElementById("firstname");
-  const lastnameField = document.getElementById("lastname");
-  const usernameField = document.getElementById("username");
-  const emailField = document.getElementById("email");
+  const emailField = document.getElementById("email"); 
   const msgField = document.getElementById("message");
   const msgError = document.getElementById("msgError");
-  const passField= document.getElementById("password");
-  const passField2= document.getElementById("password2");
   const validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   //validation condition
   if (!nameField.value) {
     nameField.classList.add("invalid");
   } else nameField.classList.remove("invalid");
-
-  if (!firstnameField.value) {
-    firstnameField.classList.add("invalid");
-  } else firstnameField.classList.remove("invalid");
-
-  if (!lastnameField.value) {
-    lastnameField.classList.add("invalid");
-  } else lastnameField.classList.remove("invalid");
-
-  if (!usernameField.value) {
-    usernameField.classList.add("invalid");
-  } else usernameField.classList.remove("invalid");
 
   if (!emailField.value.match(validEmailRegex)) {
     emailField.classList.add("invalid");
@@ -75,15 +58,6 @@ async function validate(e) {
     msgField.classList.remove("invalid");
     msgError.classList.remove("visible");
   }
-
-  if (!passField.value) {
-    passField.classList.add("invalid");
-  } else passField.classList.remove("invalid");
-
-  if (!passField2.value) {
-    passField2.classList.add("invalid");
-  } else passField2.classList.remove("invalid");
-
   //form validation function
 
   //send condition
@@ -91,12 +65,79 @@ async function validate(e) {
     await sleep(1500);
     document.getElementById("form-message-success").style.visibility = "visible";
   }
-
-  if (firstnameField.value != "" && lastField.value != "" && usernameField.value != "" && emailField.value.match(validEmailRegex) && passField === passField2) {
-    await sleep(1500);
-    document.getElementById("form-register-success").style.visibility = "visible";
-  }
 }
+
+// const register = document.getElementById("register");
+
+// register.addEventListener('click', validate);
+
+// //form validation function
+// async function validate(e) {
+//   e.preventDefault();
+
+//   //declare field to validate
+//   const nameField = document.getElementById("name");
+//   const firstnameField = document.getElementById("firstname");
+//   const lastnameField = document.getElementById("lastname");
+//   const usernameField = document.getElementById("username");
+//   const emailField = document.getElementById("email");
+//   const msgField = document.getElementById("message");
+//   const msgError = document.getElementById("msgError");
+//   const passField= document.getElementById("password");
+//   const passField2= document.getElementById("password2");
+//   const validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+//   //validation condition
+//   if (!nameField.value) {
+//     nameField.classList.add("invalid");
+//   } else nameField.classList.remove("invalid");
+
+//   if (!firstnameField.value) {
+//     firstnameField.classList.add("invalid");
+//   } else firstnameField.classList.remove("invalid");
+
+//   if (!lastnameField.value) {
+//     lastnameField.classList.add("invalid");
+//   } else lastnameField.classList.remove("invalid");
+
+//   if (!usernameField.value) {
+//     usernameField.classList.add("invalid");
+//   } else usernameField.classList.remove("invalid");
+
+//   if (!emailField.value.match(validEmailRegex)) {
+//     emailField.classList.add("invalid");
+//   } else emailField.classList.remove("invalid");
+
+//   if (msgField.value.length < 10) {
+//     msgField.classList.add("invalid");
+//     msgError.classList.add("visible");
+//     msgError.setAttribute("aria-hidden", false);
+//     msgError.setAttribute("aria-invalid", true);
+//   } else {
+//     msgField.classList.remove("invalid");
+//     msgError.classList.remove("visible");
+//   }
+
+//   if (!passField.value) {
+//     passField.classList.add("invalid");
+//   } else passField.classList.remove("invalid");
+
+//   if (!passField2.value) {
+//     passField2.classList.add("invalid");
+//   } else passField2.classList.remove("invalid");
+
+//   //form validation function
+
+//   //send condition
+//   if (nameField.value != null && emailField.value.match(validEmailRegex) && msgField.value.length >= 10 ) {
+//     await sleep(1500);
+//     document.getElementById("form-message-success").style.visibility = "visible";
+//   }
+
+//   if (firstnameField.value != "" && lastField.value != "" && usernameField.value != "" && emailField.value.match(validEmailRegex) && passField === passField2) {
+//     await sleep(1500);
+//     document.getElementById("form-register-success").style.visibility = "visible";
+//   }
+// }
 //display showing and coming tab
 function show(type) {
   var tab = document.querySelector(`.main-movies-content[data-toggle="${type}"] .main-movies-pane`);
