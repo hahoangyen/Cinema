@@ -34,8 +34,8 @@ body {
 }
 
 .logo_img {
-    height: 50px;
-    width: 300px;
+    height: 35px;
+    width:300px;
 }
 
 
@@ -177,6 +177,7 @@ input[type="search"]:focus {
 
 .mobile-nav a img {
     padding-left: 17vw;
+    height: 30px;
 }
 
 /* Style the hamburger menu */
@@ -189,6 +190,7 @@ input[type="search"]:focus {
     height: 61px;
     width: 61px;
 }
+
 
 /* Add a grey background color on mouse-over */
 .mobile-nav a:hover {
@@ -570,7 +572,6 @@ ul.breadcrumb li a:hover {
 
 .footer-mobile-logo {
     padding-bottom: 20px;
-    padding-right: 100px;
     margin-right: 100px;
 }
 
