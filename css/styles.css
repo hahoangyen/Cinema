@@ -10,9 +10,11 @@
 body {
     background-color: #fff;
 }
-.body{
+
+.body {
     min-height: 100vh;
 }
+
 .container {
     display: flex;
     justify-content: space-evenly;
@@ -32,8 +34,8 @@ body {
 }
 
 .logo_img {
-   height:50px;
-   width:300px;
+    height: 50px;
+    width: 300px;
 }
 
 
@@ -102,7 +104,7 @@ input[type="search"]:focus {
 
 .sign_in:hover,
 .sign_in:focus {
-    color: #008000;
+    color: #0275d8;
 }
 
 /* filter color calculator https://codepen.io/sosuke/pen/Pjoqqp */
@@ -146,7 +148,7 @@ input[type="search"]:focus {
 }
 
 .primary-nav li a:hover {
-    color: green;
+    color: #0275d8;
 }
 
 /* https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
@@ -190,7 +192,7 @@ input[type="search"]:focus {
 
 /* Add a grey background color on mouse-over */
 .mobile-nav a:hover {
-    background-color: green;
+    background-color: #0275d8;
     color: black;
 }
 
@@ -212,7 +214,6 @@ input[type="search"]:focus {
 ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
-    /* background-color: #f7f9fa; */
 }
 
 /* Display list items side by side */
@@ -365,7 +366,8 @@ ul.breadcrumb li a:hover {
 }
 
 .content-active {
-    border-bottom: 3px solid green;
+    border-bottom: 3px solid #0275d8;
+    
     color: #000 !important;
 }
 
@@ -386,7 +388,7 @@ ul.breadcrumb li a:hover {
 
 .main-movies-nav a:hover:after {
     width: 100%;
-    background: green;
+    background: #0275d8;
 }
 
 .main-movies-pane {
@@ -406,12 +408,10 @@ ul.breadcrumb li a:hover {
     flex-basis: 45%;
     margin-bottom: 20px;
     max-width: 564.58px;
-    /* height: 30vh; */
 }
 
 .main-poster {
     width: 100%;
-    /* max-height: 297.19px; */
     height: 100%;
     aspect-ratio: 16/9;
 }
@@ -519,6 +519,7 @@ ul.breadcrumb li a:hover {
     color: #f7f9fa;
     background-color: #141d2a;
 }
+
 .footer-mobile {
     display: none;
     position: relative;
@@ -541,7 +542,7 @@ ul.breadcrumb li a:hover {
     align-items: center;
     top: -30px;
     position: relative;
-    width: 55vw;
+    width: 62vw;
     max-width: 650px;
     margin: auto;
     gap: 10px;
@@ -564,46 +565,53 @@ ul.breadcrumb li a:hover {
     display: flex;
     width: 65vw;
     justify-content: space-between;
-    gap:10px;
+    gap: 10px;
 }
-.footer-mobile-logo{
+
+.footer-mobile-logo {
     padding-bottom: 20px;
     padding-right: 100px;
     margin-right: 100px;
 }
-.footer-logo img{
-    height:50px;
+
+.footer-logo img {
+    height: 50px;
     filter: invert(84%) sepia(100%) saturate(1%) hue-rotate(88deg) brightness(105%) contrast(101%);
 }
 
 .footer-nav h3 {
     font-size: 1.4rem;
 }
-.social{
+
+.social {
     display: flex;
     padding-top: 15px;
     justify-content: space-between;
     gap: 10px;
 }
-.social i{
+
+.social i {
     color: #fff;
 }
 
-.footer-vertical{
+.footer-vertical {
     display: flex;
     justify-content: space-around;
     width: 60vw;
     gap: 10px;
 }
-.footer-vertical-nav{
+
+.footer-vertical-nav {
     display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: space-between;
 }
+
 .footer-vertical-nav h3 {
     font-size: 1.4rem;
 }
+
 .btn-right {
     margin-left: auto;
 }
@@ -647,6 +655,7 @@ ul.breadcrumb li a:hover {
     padding-right: 15px;
     padding-left: 15px;
 }
+
 .contact-form-name {
     width: 50%;
 }
@@ -671,7 +680,8 @@ textarea.form-control {
 }
 
 .img-form {
-    width: 450px;
+    width: 30vw;
+    min-width: 350px;
 }
 
 .heading {
@@ -722,39 +732,16 @@ textarea.form-control {
 }
 
 
-#msgError {
+#msgError,#passError1,#passError2, #termError {
     padding-top: 15px;
     display: none;
     font-size: 0.8em;
     color: red;
 }
 
-#msgError.visible {
+#msgError.visible,#passError1.visible,#passError2.visible,#termError.visible {
     display: block;
 }
-
-#passError {
-    padding-top: 15px;
-    display: none;
-    font-size: 0.8em;
-    color: red;
-}
-
-#passError.visible {
-    display: block;
-}
-
-#passError2 {
-    padding-top: 15px;
-    display: none;
-    font-size: 0.8em;
-    color: red;
-}
-
-#passError2.visible {
-    display: block;
-}
-
 
 /* change css when validating */
 
@@ -762,6 +749,10 @@ textarea.form-control {
     border: 1px solid red;
     background: url("../img/icons8-cancel.svg") no-repeat 95% 50%;
     background-size: 5%;
+}
+
+.contact-form-name .invalid {
+    background-size: 10%;
 }
 
 input:focus:invalid {
@@ -788,7 +779,7 @@ input:focus:invalid {
 
 .review-movie-pane {
     display: flex;
-    justify-content:left;
+    justify-content: left;
     padding-left: 10vw;
     align-items: unset;
     padding-top: 30px;
@@ -1040,9 +1031,7 @@ input:focus:invalid {
     }
 
     .img-form {
-        /* display: none; */
-        width: 20px;
-        height: 10px;
+        display: none;
     }
 
     .invalid {
@@ -1069,19 +1058,24 @@ input:focus:invalid {
         gap: 50px;
         font-size: 13px;
     }
+
     .attribute .time-icon {
         width: 12px;
     }
+
     .desc {
         width: 100%;
         line-height: 1.8;
     }
+
     .footer {
         display: none;
     }
-    .footer-mobile{
+
+    .footer-mobile {
         display: block;
     }
+
     .footer-content {
         width: unset;
         padding-bottom: 15px;
@@ -1090,6 +1084,7 @@ input:focus:invalid {
     .footer-nav h3 {
         font-size: 1.2rem;
     }
+
     .hanger {
         padding: 10px 30px;
         width: unset;

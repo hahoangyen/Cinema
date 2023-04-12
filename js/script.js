@@ -113,10 +113,12 @@ if (register) {
     const emailField = document.getElementById("email");
     const validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     const validPassRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
-    const passField = document.getElementById("password");
+    const passField1 = document.getElementById("password1");
     const passField2 = document.getElementById("password2");
-    const passError = document.getElementById("passError");
+    const passError1 = document.getElementById("passError1");
     const passError2 = document.getElementById("passError2");
+    const termCheckbox = document.getElementById("term-checkbox");
+    const termError = document.getElementById("termError");
     //validation condition
 
     if (!firstnameField.value) {
@@ -135,31 +137,39 @@ if (register) {
       emailField.classList.add("invalid");
     } else emailField.classList.remove("invalid");
 
-    if (!passField.value.match(validPassRegex)) {
-      passField.classList.add("invalid");
-      passError.classList.add("visible");
-      passError.setAttribute("aria-hidden", false);
-      passError.setAttribute("aria-invalid", true);;
+    if (!passField1.value.match(validPassRegex)) {
+      passField1.classList.add("invalid");
+      passError1.classList.add("visible");
+      passError1.setAttribute("aria-hidden", false);
+      passError1.setAttribute("aria-invalid", true);
     } else {
-      passField.classList.remove("invalid");
-      passError.classList.remove("visible");
+      passField1.classList.remove("invalid");
+      passError1.classList.remove("visible");
     }
 
-    if (!passField.value === passField2) {
+    if (!(passField1.value === passField2.value)) {
       passField2.classList.add("invalid");
       passError2.classList.add("visible");
       passError2.setAttribute("aria-hidden", false);
-      passError2.setAttribute("aria-invalid", true);;
+      passError2.setAttribute("aria-invalid", true);
     } else {
       passField2.classList.remove("invalid");
       passError2.classList.remove("visible");
     }
-
+    if (!termCheckbox.checked){
+      termCheckbox.classList.add("invalid");
+      termError.classList.add("visible");
+      termError.setAttribute("aria-hidden", false);
+      termError.setAttribute("aria-invalid", true);
+    } else {
+      termCheckbox.classList.remove("invalid");
+      termError.classList.remove("visible");
+    }
     //form validation function
 
     //send condition
 
-    if (firstnameField.value != "" && lastField.value != "" && usernameField.value != "" && emailField.value.match(validEmailRegex) && passField.value.match(validPassRegex) && passField === passField2 && check - agree === checked) {
+    if (firstnameField.value != "" && lastnameField.value != "" && usernameField.value != "" && emailField.value.match(validEmailRegex) && passField1.value.match(validPassRegex) && passField1.value === passField2.value && termCheckbox.checked) {
       await sleep(1500);
       document.getElementById("form-register-success").style.visibility = "visible";
     }
