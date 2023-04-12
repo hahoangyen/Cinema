@@ -32,8 +32,8 @@ body {
 }
 
 .logo_img {
-    width: 60px;
-    height: 40px;
+    width: 250px;
+    height: 30px;
 }
 
 
@@ -731,6 +731,29 @@ textarea.form-control {
 #msgError.visible {
     display: block;
 }
+
+#passError {
+    padding-top: 15px;
+    display: none;
+    font-size: 0.8em;
+    color: red;
+}
+
+#passError.visible {
+    display: block;
+}
+
+#passError2 {
+    padding-top: 15px;
+    display: none;
+    font-size: 0.8em;
+    color: red;
+}
+
+#passError2.visible {
+    display: block;
+}
+
 
 /* change css when validating */
 

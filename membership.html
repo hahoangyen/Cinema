@@ -105,12 +105,18 @@
                         <div class="contact-form-group">
                             <input type="text" class="form-control" name="password1" id="password1"
                                 placeholder="Password">
+                                <span role="alert" id="passError" aria-hidden="true">
+                                    Your password needs to be at least eight characters, one letter and one number!!!
+                                </span>
                         </div>
                     </div>
                     <div class="contact-form-row">
                         <div class="contact-form-group">
-                            <input type="text" class="form-control" name="password2" id="re-password2"
+                            <input type="text" class="form-control" name="password2" id="password2"
                                 placeholder="Repeat Password">
+                                <span role="alert" id="passError2" aria-hidden="true">
+                                    Your password did not match!!!
+                                </span>
                         </div>
                     </div>
                     <div class="check-agree">
