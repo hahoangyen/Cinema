@@ -32,8 +32,8 @@ body {
 }
 
 .logo_img {
-    width: 250px;
-    height: 30px;
+    width: 60px;
+    height: 40px;
 }
 
 
@@ -44,7 +44,6 @@ body {
     padding: 2px;
     border: 1px solid currentColor;
     border-radius: 5px;
-    /* width: 25vw; */
 }
 
 input[type="search"] {
@@ -572,10 +571,9 @@ ul.breadcrumb li a:hover {
     padding-right: 50px;
     margin-right: 50px;
 }
-.footer-logo {
-    height: 40px;
-    width: 60px;
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(32deg) brightness(103%) contrast(103%);
+.footer-logo img{
+    height: 75px;
+    /* width: 60px; */
 }
 
 .footer-nav h3 {
