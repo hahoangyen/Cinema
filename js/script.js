@@ -218,7 +218,6 @@ function openNav() {
   }
 }
 
-// https://www.w3schools.com/howto/howto_js_curtain_menu.asp
 //overlay trailer
 // Open
 function openOverlay(element) {
